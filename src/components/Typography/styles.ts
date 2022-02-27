@@ -33,6 +33,12 @@ export const TypographyStyle = createGlobalStyle`
     font-size: 1rem;
   }
 
+  .phrase{
+    ${baseTitle};
+    font-weight: 400;
+    font-size: 1.125rem;
+  }
+
   .text{
     ${baseTitle};
     font-weight: 700;

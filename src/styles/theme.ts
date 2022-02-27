@@ -7,7 +7,8 @@ export const GlobalStyle = createGlobalStyle`
     --dark-900: #091225;
     --dark-800: #1F2B45;
     --dark-700: #252532;
-    --dark-400: #3e4568;
+    --dark-400: #202D3A;
+    --dark-300: #3e4568;
     --dark-200: #888A8F;
     --white-400: #F7F7F7;
     --white: #FFFFFF;
@@ -47,9 +48,28 @@ export const GlobalStyle = createGlobalStyle`
 
     -webkit-font-smoothing: antialiased;
 
+    overflow-x: hidden;
+
     &::-webkit-scrollbar { 
-      display: none;
+      position: absolute;
+      width: 15px;
+      display: visible;
     }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--dark-900);    /* color of the scroll thumb */
+      border-radius: 5px;       /* roundness of the scroll thumb */
+      border: 1px solid var(--dark-400);  /* creates padding around scroll thumb */
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: var(--dark-800);        /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-track-piece{
+      background: transparent;
+    }
+
   }
 
   body, input, textarea, button{
