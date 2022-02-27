@@ -57,13 +57,13 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     &::-webkit-scrollbar-thumb {
-      background-color: var(--dark-900);    /* color of the scroll thumb */
-      border-radius: 5px;       /* roundness of the scroll thumb */
-      border: 1px solid var(--dark-400);  /* creates padding around scroll thumb */
+      background-color: var(--dark-900); 
+      border-radius: 5px; 
+      border: 1px solid var(--dark-400);
     }
     
     &::-webkit-scrollbar-track {
-      background: var(--dark-800);        /* color of the tracking area */
+      background: var(--dark-800); 
     }
 
     &::-webkit-scrollbar-track-piece{

@@ -17,6 +17,8 @@ export const Container = styled.div`
       
       border: none;
       border-left: 4px solid var(--dark-800);
+      border-radius: 0.25rem 0 0 0.25rem;
+
       background: transparent;
       color: var(--dark-800);
       font-weight: 700;
@@ -42,6 +44,8 @@ export const Content = styled.div`
   width: 100%;
   max-width: 800px;
   overflow: hidden;
+
+  border-radius: 0.25rem;
 
   section{
     height: 100%;
