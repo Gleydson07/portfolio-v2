@@ -13,21 +13,24 @@ const fill = keyframes`
 export const Container = styled.header`
   position: fixed;
   width: 100%;
-
-  background: var(--dark-gradient);
+  height: 70px;
+  z-index: 1;
+  
+  backdrop-filter: blur(5px);
   
   div{
-    width: 1440px;
-    height: 100%;
-
-    margin: 0 auto;
-    padding: 0 2rem;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    
+    margin: 0 auto;
+    padding: 0 2rem;
+    
     span{
       font-size: var(--fontSize48);
       color: var(--white-400);
@@ -48,6 +51,10 @@ export const Container = styled.header`
           display: list-item;
           text-align: -webkit-match-parent;
           padding: var(--fontSize8) var(--fontSize16);
+
+          &:last-child{
+            padding-right: 0;
+          }
           
           a{
             color: var(--yellow-500);
@@ -88,7 +95,6 @@ export const Container = styled.header`
           }
         }
       }
-
     }
   }
 `;
