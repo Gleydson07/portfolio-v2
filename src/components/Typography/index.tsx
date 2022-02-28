@@ -3,7 +3,7 @@ import { TypographyStyle } from './styles';
 
 interface TypographyProps {
   children: String,
-  className: "title" | "subtitle" | "subtitle-medium" | "text" | "paragraph" | "phrase" | "tag",
+  className: "title" | "subtitle" | "subtitle-medium" | "subtitle-small" | "text" | "paragraph" | "phrase" | "tag",
   htmlElement: "span" | "strong" | "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 }
 

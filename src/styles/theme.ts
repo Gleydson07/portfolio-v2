@@ -40,6 +40,8 @@ export const GlobalStyle = createGlobalStyle`
     @media(max-width: 600px) {
       font-size: 81.25%;
     }
+
+    scroll-behavior: smooth;
   }
 
   body{
@@ -52,20 +54,22 @@ export const GlobalStyle = createGlobalStyle`
 
     &::-webkit-scrollbar { 
       position: absolute;
-      width: 15px;
       display: visible;
+      width: 12px;
     }
     
     &::-webkit-scrollbar-thumb {
       background-color: var(--dark-900); 
-      border-radius: 5px; 
+      border-radius: 4px; 
       border: 1px solid var(--dark-400);
+
+      width: 100%;
     }
     
     &::-webkit-scrollbar-track {
       background: var(--dark-800); 
     }
-
+    
     &::-webkit-scrollbar-track-piece{
       background: transparent;
     }

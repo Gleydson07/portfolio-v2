@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 import { Container } from './styles';
 
 const Header: React.FC = () => {
-  const [selected, setSelected] = useState("home");
+  const [selected, setSelected] = useState("nav-home");
 
   const handleClick = (event: any) => {
-    setSelected(event.target.id);
+    const idSelected = event.target.id;
+    setSelected(idSelected);
   }
   
   return (
@@ -21,40 +22,40 @@ const Header: React.FC = () => {
           <ul>
             <li>
               <a
-                id="home"
+                id="nav-home"
                 onClick={handleClick} 
                 href="/#home" 
-                className={`${selected === "home" ? "active" : ""}`} 
+                className={`${selected === "nav-home" ? "active" : ""}`} 
               >
                 Início
               </a>
             </li>
             <li>
               <a
-                id="about"
+                id="nav-about"
                 onClick={handleClick} 
                 href="/#about" 
-                className={`${selected === "about" ? "active" : ""}`} 
+                className={`${selected === "nav-about" ? "active" : ""}`} 
               >
                 Sobre mim
               </a>
             </li>
             <li>
               <a
-                id="experience"
+                id="nav-experience"
                 onClick={(e:any) => handleClick(e)} 
                 href="/#experience"
-                className={`${selected === "experience" ? "active" : ""}`} 
+                className={`${selected === "nav-experience" ? "active" : ""}`} 
               >
                 Experiências
               </a>
             </li>
             <li>
               <a
-                id="skills"
+                id="nav-skills"
                 onClick={(e:any) => handleClick(e)} 
                 href="/#skills"
-                className={`${selected === "skills" ? "active" : ""}`} 
+                className={`${selected === "nav-skills" ? "active" : ""}`} 
               >
                 Skills
               </a>
@@ -62,10 +63,10 @@ const Header: React.FC = () => {
             </li>
             <li>
               <a
-                id="projects"
+                id="nav-projects"
                 onClick={(e:any) => handleClick(e)} 
                 href="/#projects"
-                className={`${selected === "projects" ? "active" : ""}`} 
+                className={`${selected === "nav-projects" ? "active" : ""}`} 
               >
                 Projetos
               </a>

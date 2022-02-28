@@ -30,7 +30,7 @@ export const About: React.FC<AboutProps> = ({...props}) => {
     >
       <Content>
         <Typography
-          className='subtitle'
+          className='subtitle-medium'
           htmlElement='h2'
         >
           SOBRE MIM
@@ -42,7 +42,7 @@ export const About: React.FC<AboutProps> = ({...props}) => {
           </figure>
           <div className='description-container'>
             <Typography
-              className='paragraph'
+              className='phrase'
               htmlElement='p'
             >
               Formado em Sistemas de informação em 2018 e atualmente pós-graduando em Engenharia de Software, sempre me considerei um entusiasta de tecnologia e seus impactos na sociedade. Gosto de desafios e busco 

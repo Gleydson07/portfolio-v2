@@ -7,7 +7,7 @@ import {
   Content
 } from './styles';
 
-interface AboutProps extends HTMLAttributes<HTMLDivElement>{
+interface ExperienceProps extends HTMLAttributes<HTMLDivElement>{
 }
 
 const tabContent = [
@@ -26,17 +26,31 @@ const tabContent = [
       }
     },
   },
+  {
+    company: "AglSolutions",
+    work: {
+      position: "Desenvolvedor web front-end",
+      descriptions: [
+        "Desenvolvimento de uma solução que envolve o mercado financeiro, permitindo que seus clientes possam tomar decisões de acordo com os dados fornecidos. ",
+
+        "Ferramentas mais usadas: ReactJS, Typescript, Styled-Components."
+      ],
+      date: {
+        initial: "Freelancer",
+      }
+    },
+  },
 ]
 
-export const Experience: React.FC<AboutProps> = ({...props}) => {
+export const Experience: React.FC<ExperienceProps> = ({...props}) => {
   return (
-    <Container 
+    <Container  
       id="experience"
       {...props}
     >
       <Content>
         <Typography
-          className='subtitle'
+          className='subtitle-medium'
           htmlElement='h2'
         >
           EXPERIÊNCIA
@@ -48,6 +62,8 @@ export const Experience: React.FC<AboutProps> = ({...props}) => {
           />
         </div>
       </Content>
+
+      <span className='circle-orange'></span>
     </Container>
   );
 }

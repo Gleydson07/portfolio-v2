@@ -11,7 +11,7 @@ interface TabProps {
       descriptions: string[],
       date: {
         initial: string,
-        final: string
+        final?: string
       }
     }
   }[]
@@ -47,7 +47,7 @@ const Tab: React.FC<TabProps> = ({
           currentTab === item.company.toLowerCase() &&
             <section key={item.company}>
               <Typography
-                className='subtitle-medium'
+                className='subtitle-small'
                 htmlElement='h4'
               >
                 {item.work.position}
@@ -65,7 +65,7 @@ const Tab: React.FC<TabProps> = ({
                   className='tag'
                   htmlElement='p'
                 >
-                  {`${item.work.date.initial} - ${item.work.date.final}`}
+                  {`${item.work.date.initial} ${item.work.date.final ? ` - ${item.work.date.final}` : ""}`}
                 </Typography>
               </div>
               

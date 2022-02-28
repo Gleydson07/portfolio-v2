@@ -32,7 +32,6 @@ export const Container = styled.div`
         border-left: 4px solid transparent;
 
         background-image: var(--orange-gradient);
-        background-origin: border-box;
         box-shadow: 2px 1000px 1px var(--dark-800) inset;
       }
     }
@@ -45,7 +44,12 @@ export const Content = styled.div`
   max-width: 800px;
   overflow: hidden;
 
-  border-radius: 0.25rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+
+  border-right: 4px solid transparent;
+
+  background-image: var(--orange-gradient);
+  box-shadow: 2px 1000px 1px var(--dark-800) inset;
 
   section{
     height: 100%;

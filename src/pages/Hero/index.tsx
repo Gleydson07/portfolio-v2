@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({...props}) => {
           </Typography>
 
           <Typography 
-            className='subtitle-medium' 
+            className='subtitle-small' 
             htmlElement='span'
           >
             Desenvolvedor front-end web.

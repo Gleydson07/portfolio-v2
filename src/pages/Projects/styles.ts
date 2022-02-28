@@ -9,18 +9,6 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-
-  .circle-orange{
-    position: absolute;
-    bottom: 0;
-    left: -150px;
-    border-radius: 150px;
-    width: 300px;
-    height: 300px;
-
-
-    background: var(--orange-700);
-  }
 `;
 
 export const Content = styled.div`  

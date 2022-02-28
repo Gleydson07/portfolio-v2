@@ -23,6 +23,12 @@ export const TypographyStyle = createGlobalStyle`
 
   .subtitle-medium{
     ${baseTitle};
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  .subtitle-small{
+    ${baseTitle};
     font-weight: 500;
     font-size: 1.5rem;
   }
