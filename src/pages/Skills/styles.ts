@@ -85,8 +85,9 @@ export const Content = styled.div<StyleSkillsProps>`
         margin: 1rem;
 
         text-align: justify;
-
         text-indent: 1rem;
+
+        color: var(--dark-200);
       }
     }
   }

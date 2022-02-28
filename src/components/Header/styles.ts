@@ -16,7 +16,7 @@ export const Container = styled.header`
   height: 70px;
   z-index: 1;
   
-  /* backdrop-filter: blur(5px); */
+  backdrop-filter: blur(5px);
   
   div{
     display: flex;

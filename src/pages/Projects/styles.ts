@@ -7,8 +7,7 @@ export const Container = styled.div`
   justify-content: center;
 
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 `;
 
 export const Content = styled.div`  
@@ -17,11 +16,14 @@ export const Content = styled.div`
 
   margin: auto;
   padding: 0 var(--fontSize32);
+  padding-top: 8rem;
 
   .content{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    flex-wrap: wrap;
 
     margin: 3rem auto;
     max-width: 1200px;
