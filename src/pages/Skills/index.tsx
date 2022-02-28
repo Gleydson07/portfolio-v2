@@ -67,10 +67,6 @@ const skillsDescription = [
 export const Skills: React.FC<SkillsProps> = ({...props}) => {
   const [skillActive, setSkillActive] = useState('');
 
-  useEffect(() => {
-    console.log("skillActive", !!skillActive)
-  }, [skillActive])
-
   return (
     <Container 
       id="skills"

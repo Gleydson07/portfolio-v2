@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from 'react';
 import Typography from '../../components/Typography';
 
-import me2Img from '../../assets/imgs/me2.png'
+import me2Img from '../../assets/imgs/about/me2.png'
 
 import {
   FaGithub,

@@ -67,7 +67,7 @@ const CardProject: React.FC<CardProjectProps> = ({
 
         <div className='tools-list'>
           {tools.map(item => (
-            <Tooltip title={item.tooltip}>{item.icon}</Tooltip>
+            <Tooltip key={item.tooltip} title={item.tooltip}>{item.icon}</Tooltip>
           ))}
         </div>
 

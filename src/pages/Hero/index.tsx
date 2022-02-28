@@ -2,9 +2,9 @@ import React, { HTMLAttributes } from 'react';
 
 import Button from '../../components/Button';
 import Typography from '../../components/Typography';
+import { svgDevCommiting } from '../../assets/svgs/hero';
 
 import {FiDownload} from 'react-icons/fi'
-import { svgDevCommiting } from '../../assets/svgs/hero';
 
 import { 
   Container,
