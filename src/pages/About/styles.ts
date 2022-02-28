@@ -67,7 +67,16 @@ export const Content = styled.div`
     max-width: 400px;
     margin: auto;
 
-    a{
+    a{        
+      svg{
+        color: var(--white);
+
+        transition: all 0.2s;
+
+        &:hover{
+          color: var(--yellow-500);
+        }
+      }
      
       &:not(:first-child){
         margin-left: 2.5rem;
