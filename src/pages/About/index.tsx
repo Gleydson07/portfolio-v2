@@ -50,7 +50,7 @@ export const About: React.FC<AboutProps> = ({...props}) => {
             </Typography>
             
             <Typography
-              className='paragraph'
+              className='phrase'
               htmlElement='p'
             >
               Ao passo que aprimoro minhas habilidades e amplio meu conhecimento, percebo que o aprendizado é um processo prazeroso e infinito de constante evolução.
