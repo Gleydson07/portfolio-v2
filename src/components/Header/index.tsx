@@ -1,4 +1,5 @@
 import React, { MouseEvent, useEffect, useState } from 'react';
+import { Fade as Hamburger } from 'hamburger-react'
 
 import FlagButton from '../FlagButton';
 
@@ -12,6 +13,7 @@ import loadLangText from '../../utils/TextConvert';
 const storageLangName = "gsantos@lang";
 
 const Header: React.FC = () => {
+  const [isOpenMenuBurger, setOpenMenuBurger] = useState(false);
   const [selected, setSelected] = useState("nav-home");  
   const [langSelected, setLangSelected] = useState(localStorage.getItem(storageLangName) || "en");
 
@@ -19,6 +21,7 @@ const Header: React.FC = () => {
     const idSelected = event.currentTarget.id;
 
     setSelected(idSelected);
+    setOpenMenuBurger(false);
   }
 
   const handleChangeLang = (event: MouseEvent<HTMLButtonElement>) => {
@@ -51,95 +54,106 @@ const Header: React.FC = () => {
   }, [])
 
   return (
-    <Container>
+    <Container openMenuBurger={isOpenMenuBurger}>
       <div>
-        <div className='logo-container'>
-          <span>
-            <strong>gsantos</strong>
-            .dev
-          </span>
+        <span>
+          <strong>gsantos</strong>
+          .dev
+        </span>
 
-          <div className="flag-container">
-            <FlagButton
-              id="pt-BR"
-              image={imgBrazil}
-              tooltip="Brasil"
-              onClick={handleChangeLang}
-              disabled={langSelected === "pt-BR"}
-            />
-            <FlagButton
-              id="en"
-              image={imgEUA}
-              tooltip="USA"
-              onClick={handleChangeLang}
-              disabled={langSelected === "en"}
-            />
-            <FlagButton
-              id="es"
-              image={imgSpanish}
-              tooltip="Espanã"
-              onClick={handleChangeLang}
-              disabled={langSelected === "es"}
-            />
-          </div>
-        </div>
-      
         <nav>
-          <ul>
-            <li>
-              <a
-                id="nav-home"
-                href="/#home" 
-                onClick={handleClick} 
-                className={`${selected === "nav-home" ? "active" : ""}`} 
-              >
-                {loadLangText("app.header.home", "Início")}
-              </a>
-            </li>
-            <li>
-              <a
-                id="nav-about"
-                href="/#about" 
-                onClick={handleClick} 
-                className={`${selected === "nav-about" ? "active" : ""}`} 
-              >
-                {loadLangText("app.header.about", "Sobre mim")}
-              </a>
-            </li>
-            <li>
-              <a
-                id="nav-experience"
-                href="/#experience"
-                onClick={(e:any) => handleClick(e)} 
-                className={`${selected === "nav-experience" ? "active" : ""}`} 
-              >
-                {loadLangText("app.header.experience", "Experiências")}
-              </a>
-            </li>
-            <li>
-              <a
-                id="nav-skills"
-                href="/#skills"
-                onClick={(e:any) => handleClick(e)} 
-                className={`${selected === "nav-skills" ? "active" : ""}`} 
-              >
-                {loadLangText("app.header.skills", "Habilidades")}
-              </a>
-              
-            </li>
-            <li>
-              <a
-                id="nav-projects"
-                href="/#projects"
-                onClick={(e:any) => handleClick(e)} 
-                className={`${selected === "nav-projects" ? "active" : ""}`} 
-              >
-                {loadLangText("app.header.projects", "Projetos")}
-              </a>
-            </li>
-          </ul>
-          
+          <div className='wrapper'>
+            <div className="flag-container">
+              <FlagButton
+                id="pt-BR"
+                image={imgBrazil}
+                tooltip="Brasil"
+                onClick={handleChangeLang}
+                disabled={langSelected === "pt-BR"}
+              />
+              <FlagButton
+                id="en"
+                image={imgEUA}
+                tooltip="USA"
+                onClick={handleChangeLang}
+                disabled={langSelected === "en"}
+              />
+              <FlagButton
+                id="es"
+                image={imgSpanish}
+                tooltip="Espanã"
+                onClick={handleChangeLang}
+                disabled={langSelected === "es"}
+              />
+            </div>
+
+            <ul>
+              <li>
+                <a
+                  id="nav-home"
+                  href="/#home" 
+                  onClick={handleClick} 
+                  className={`${selected === "nav-home" ? "active" : ""}`} 
+                >
+                  {loadLangText("app.header.home", "Início")}
+                </a>
+              </li>
+              <li>
+                <a
+                  id="nav-about"
+                  href="/#about" 
+                  onClick={handleClick} 
+                  className={`${selected === "nav-about" ? "active" : ""}`} 
+                >
+                  {loadLangText("app.header.about", "Sobre mim")}
+                </a>
+              </li>
+              <li>
+                <a
+                  id="nav-experience"
+                  href="/#experience"
+                  onClick={(e:any) => handleClick(e)} 
+                  className={`${selected === "nav-experience" ? "active" : ""}`} 
+                >
+                  {loadLangText("app.header.experience", "Experiências")}
+                </a>
+              </li>
+              <li>
+                <a
+                  id="nav-skills"
+                  href="/#skills"
+                  onClick={(e:any) => handleClick(e)} 
+                  className={`${selected === "nav-skills" ? "active" : ""}`} 
+                >
+                  {loadLangText("app.header.skills", "Habilidades")}
+                </a>
+                
+              </li>
+              <li>
+                <a
+                  id="nav-projects"
+                  href="/#projects"
+                  onClick={(e:any) => handleClick(e)} 
+                  className={`${selected === "nav-projects" ? "active" : ""}`} 
+                >
+                  {loadLangText("app.header.projects", "Projetos")}
+                </a>
+              </li>
+            </ul>          
+          </div>
         </nav>
+
+        <div className='menu-burger-wrapper'>
+          <Hamburger
+            toggled={isOpenMenuBurger} 
+            toggle={setOpenMenuBurger}
+            color="#FFB802"
+            distance="md"
+            duration={0.8}
+            size={32}
+            onToggle={() => !isOpenMenuBurger && console.log("open")}
+          />
+        </div>
       </div>
 
     </Container>

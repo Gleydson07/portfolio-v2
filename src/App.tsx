@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from './components/Header';
-
-import { Hero } from './pages/Hero';
-import { About } from './pages/About';
-import { Experience } from './pages/Experience';
 import { Skills } from './pages/Skills';
-import { Projects } from './pages/Projects';
 
-import { GlobalStyle } from './styles/theme';
 import { IntlProvider } from 'react-intl';
+import { GlobalStyle } from './styles/theme';
 
 import langPortugueseBrazil from "./lang/pt-br.json";
 import langEnglish from "./lang/en-us.json";
@@ -31,7 +26,6 @@ function App() {
   }  
   
   useEffect(() => {
-    console.log(navigator.language)
     loadLocale();
   }, [])
 
@@ -40,11 +34,11 @@ function App() {
     <IntlProvider locale={navigator.language} messages={currentLanguageFile}>
       <GlobalStyle/>
       <Header/>
-      <Hero/>
-      <About/>
-      <Experience/>
+      {/* <Hero/> */}
+      {/* <About/> */}
+      {/* <Experience/> */}
       <Skills/>
-      <Projects/>
+      {/* <Projects/> */}
     </IntlProvider>
   );
 }

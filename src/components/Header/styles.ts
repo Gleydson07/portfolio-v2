@@ -1,6 +1,10 @@
-import styled, {keyframes} from 'styled-components';
+import styled, {css, keyframes} from 'styled-components';
 
-const fill = keyframes`
+interface StyleHeaderProps {
+  openMenuBurger: boolean
+}
+
+const fillWidth = keyframes`
 	0% {
 		width: 0%;
 	}
@@ -10,7 +14,7 @@ const fill = keyframes`
 	}
 `
 
-export const Container = styled.header`
+export const Container = styled.header<StyleHeaderProps>`
   position: fixed;
   width: 100%;
   height: 70px;
@@ -20,8 +24,6 @@ export const Container = styled.header`
   
   > div{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     
     max-width: 1440px;
@@ -31,27 +33,6 @@ export const Container = styled.header`
     margin: 0 auto;
     padding: 0 2rem;
 
-    .logo-container{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-      .flag-container{
-        display: flex;
-        align-items: flex-end;
-
-        height: 25px;
-        margin-left: 2rem;
-
-        button{
-          & + button{
-            margin-left: 0.5rem;
-          }
-        }
-      }
-    }
-
-    
     span{
       font-size: var(--fontSize48);
       color: var(--white-400);
@@ -64,58 +45,185 @@ export const Container = styled.header`
     }
 
     nav{
-      ul{
+      flex: 1;
+      
+      .wrapper{
         display: flex;
-        list-style: none;
+        align-items: center;
+        justify-content: space-between;
 
-        li{
-          display: list-item;
-          text-align: -webkit-match-parent;
-          padding: var(--fontSize8) var(--fontSize16);
-
-          &:last-child{
-            padding-right: 0;
-          }
-          
-          a{
-            color: var(--yellow-500);
-            text-decoration: none;  
-            width: 100%;
-            
-            &:hover:not(.active){
-              &::after{
-                content: '';
-                display: block;
-                
-                width: 0;
-                height: var(--fontSize4);
-                margin-top: var(--fontSize4);
-
-                background: var(--dark-400);
-                border-radius: var(--fontSize4);
-
-                animation: ${fill} 1500ms ease both;
-              }
+        .flag-container{
+          display: flex;
+          align-items: flex-end;
+  
+          height: 25px;
+          margin-left: 1.5rem;
+  
+          button{
+            & + button{
+              margin-left: 0.5rem;
             }
-    
-            &.active{
-              &::after{
-                content: '';
-                display: block;
-                
-                width: 0;
-                height: var(--fontSize4);
-                margin-top: var(--fontSize4);
-
-                background: var(--white-400);
-                border-radius: var(--fontSize4);
-
-                animation: ${fill} 1500ms ease both;
+          }
+        }
+  
+        ul{
+          display: flex;
+          list-style: none;
+  
+          li{
+            display: list-item;
+            text-align: -webkit-match-parent;
+            padding: var(--fontSize8) var(--fontSize16);
+  
+            &:last-child{
+              padding-right: 0;
+            }
+            
+            a{
+              color: var(--yellow-500);
+              text-decoration: none;  
+              width: 100%;
+              
+              &:hover:not(.active){
+                &::after{
+                  content: '';
+                  display: block;
+                  
+                  width: 0;
+                  height: var(--fontSize4);
+                  margin-top: var(--fontSize4);
+  
+                  background: var(--dark-400);
+                  border-radius: var(--fontSize4);
+  
+                  animation: ${fillWidth} 1500ms ease both;
+                }
+              }
+      
+              &.active{
+                &::after{
+                  content: '';
+                  display: block;
+                  
+                  width: 0;
+                  height: var(--fontSize4);
+                  margin-top: var(--fontSize4);
+  
+                  background: var(--white-400);
+                  border-radius: var(--fontSize4);
+  
+                  animation: ${fillWidth} 1500ms ease both;
+                }
               }
             }
           }
         }
       }
+    }
+
+    .menu-burger-wrapper{
+      display: none;
+    }
+  }
+
+  @media(max-width: 1100px){
+    > div{
+      span{
+        font-size: var(--fontSize32);
+      }
+
+      .flag-container{
+        max-height: 18px;
+        margin-left: 2rem;
+      }
+
+    }
+  }
+
+  @media(max-width: 900px){
+    > div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      nav{
+        position: fixed;
+        top: 5rem;
+        left: 0;      
+        
+        width: 100%;
+        padding: 0;
+        height: calc(100vh - 4.975rem);
+        background: var(--dark-900);
+
+        ${({ openMenuBurger }) => openMenuBurger 
+        ? css`
+            transition: all 0.3s;
+            left: 0;
+          ` 
+          : css`
+            transition: all 0.3s;
+            left: 100%;
+          `
+        }
+
+        .wrapper{
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: flex-end;
+
+          width: 100%;
+          height: 100%;
+
+          .flag-container{
+            margin-top: 4rem;
+            margin-left: 0;
+
+            width: 100%;
+            max-height: 20px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            button{
+              & + button{
+                margin-left: 1rem;
+              }
+            }
+          }
+          
+          ul{
+            display: flex;
+            flex-direction: column;
+            align-self: flex-end;
+            align-items: flex-end;
+  
+            li, li:last-child{
+              padding: 0.5rem 2rem;
+              width: fit-content;
+              
+              &:first-child{
+                margin-top: 1.5rem;
+              }
+              
+              a{
+                display: block;
+                font-size: 1.25rem;
+                font-weight: 700;
+                
+                text-align: center;
+                height: 2.25rem;
+              }
+            }
+          }  
+        }
+      }
+
+      .menu-burger-wrapper{
+        display: block;
+      }
+       
     }
   }
 `;

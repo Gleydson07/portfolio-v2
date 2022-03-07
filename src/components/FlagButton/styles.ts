@@ -12,4 +12,14 @@ export const Container = styled.button`
     height: auto;
   }
 
+
+  @media(max-width: 1100px){
+    width: 22px;
+    height: 16px;
+  }
+
+  @media(max-width: 950px){
+    width: 25px;
+    height: 18px;
+  }
 `
