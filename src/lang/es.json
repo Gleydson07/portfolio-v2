@@ -19,5 +19,20 @@
   "app.experience.one.position": "Desarrollador Front-end",
   "app.experience.one.description-one": "Cree aplicaciones con interfaces receptivas, cree códigos bien estructurados, eficientes y comprobables, haciendo uso de las mejores prácticas de desarrollo de software. Integrar datos a través del consumo de servicios back-end, crear y mantener documentación del software desarrollado, entre otros.",
   "app.experience.one.description-two": "Herramientas más utilizadas: ReactJS, NextJs, Typescript.",
-  "app.experience.one.date": "09/08/2021 - Actual"
+  "app.experience.one.date": "09/08/2021 - Actual",
+  
+  "app.skills.title": "HABILIDADES",
+  "app.skills.react": "Biblioteca creada por Facebook enfocada a crear interfaces de forma declarativa, eficiente y flexible.",
+  "app.skills.next": "Next.js es un marco web de desarrollo front-end de React de código abierto creado por Vercel que habilita funcionalidades como la representación del lado del servidor y la generación de sitios web estáticos para aplicaciones web basadas en React.",
+  "app.skills.reactnative": "React Native es una biblioteca de Javascript creada por Facebook. Se utiliza para desarrollar aplicaciones para sistemas Android e iOS de forma nativa.",
+  "app.skills.firebase": "Firebase es una plataforma desarrollada por Google para crear aplicaciones móviles y web.",
+  "app.skills.figma": "Figma es una herramienta de interfaz de usuario en línea gratuita creada para crear, colaborar, crear prototipos e inspeccionar.",
+  "app.skills.git": "Es un sistema de control de versiones distribuido, utilizado principalmente en el desarrollo de software, pero se puede utilizar para registrar el historial de edición de cualquier tipo de archivo.",
+
+  "app.projects.title": "PROYECTOS",
+  "app.projects.title-used-technology" : "Tecnologías utilizadas",
+  "app.projects.visit-button": "Visita",
+  "app.projects.one.description": "Trabajo freelance desarrollando la interfaz de una plataforma de seguimiento y gestión financiera.",
+  "app.projects.two.description": "Reto propuesto durante un proceso de selección de desarrollador front-end. Es un formulario de preguntas y respuestas sobre varios temas, al final tenemos un resumen de las respuestas.",
+  "app.projects.three.description": "Es un juego que tiene como objetivo que los niños practiquen las enseñanzas adquiridas en la escuela de forma lúdica utilizando la temática del juego POKEMON."
 }

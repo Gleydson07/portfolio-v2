@@ -16,7 +16,8 @@ import { Container } from './styles';
 interface CardProjectProps {
   image: string,
   title: string,
-  description: string,
+  translateId: string,
+  messageDefault: string,
   tools: {
     icon: JSX.Element,
     tooltip: string,
@@ -31,10 +32,11 @@ const githubIcon = <SiGithub/>;
 const CardProject: React.FC<CardProjectProps> = ({
   image,
   title,
-  description,
+  translateId,
+  messageDefault,
   tools,
   pageLink,
-  githubLink,
+  githubLink
 }) => {
 
   return (
@@ -54,16 +56,16 @@ const CardProject: React.FC<CardProjectProps> = ({
         <Typography
           className='tag'
           htmlElement='strong'
-        >
-          {description}
-        </Typography>
+          translateId={translateId}
+          messageDefault={messageDefault}
+        />
 
         <Typography
           className='paragraph'
           htmlElement='p'
-        >
-          Tecnologias usadas
-        </Typography>
+          translateId="app.projects.title-used-technology"
+          messageDefault="Tecnologias usadas"
+        />
 
         <div className='tools-list'>
           {tools.map(item => (
@@ -74,7 +76,8 @@ const CardProject: React.FC<CardProjectProps> = ({
         <div className='call-to-actions'>
           {pageLink ? <LinkButton
             icon={linkIcon}
-            text="Visitar"
+            translateId='app.projects.visit-button'
+            messageDefault="Visitar"
             link={pageLink}
             target="_blank"
           /> : ""}

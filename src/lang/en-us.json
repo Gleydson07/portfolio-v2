@@ -19,5 +19,20 @@
   "app.experience.one.position": "Front-end developer",
   "app.experience.one.description-one": "Create applications with responsive interfaces, create well-structured, efficient and testable codes, making use of software development best practices. Integrate data through the consumption of back-end services, create and maintain documentation of the developed software, among others.",
   "app.experience.one.description-two": "Most used tools: ReactJS, NextJs, Typescript.",
-  "app.experience.one.date": "09/08/2021 - Current"
+  "app.experience.one.date": "09/08/2021 - Current",
+
+  "app.skills.title": "SKILLS",
+  "app.skills.react": "Library created by Facebook focused on creating interfaces in a declarative, efficient and flexible way.",
+  "app.skills.next": "Next.js is an open source React front-end development web framework created by Vercel that enables functionality such as server-side rendering and static website generation for React-based web applications.",
+  "app.skills.reactnative": "React Native is a Javascript library created by Facebook. It is used to develop applications for Android and iOS systems natively.",
+  "app.skills.firebase": "Firebase is a platform developed by Google for building mobile and web applications.",
+  "app.skills.figma": "Figma is a free, online UI tool made for creating, collaborating, prototyping and inspecting.",
+  "app.skills.git": "It is a distributed version control system, mainly used in software development, but it can be used to record edit history of any type of file.",
+
+  "app.projects.title": "PROJECTS",
+  "app.projects.title-used-technology" : "Technologies used",
+  "app.projects.visit-button": "Visit",
+  "app.projects.one.description": "Freelance work developing the interface of a monitoring and financial management platform.",
+  "app.projects.two.description": "Challenge proposed during a selection process for front-end developer. It is a question and answer form on various subjects, at the end we have a summary of the answers.",
+  "app.projects.three.description": "It is a game that aims to allow children to practice the teachings acquired at school in a playful way using the theme of the POKEMON game."
 }

@@ -23,7 +23,10 @@ const projectsList = [
   {
     image: beepImg,
     title: "BEEP",
-    description: "Trabalho freelancer de desenvolvimento da interface de uma plataforma de acompanhamento e gestão financeira.",
+    description: {
+      id: "app.projects.one.description",
+      messageDefault: "Trabalho freelancer de desenvolvimento da interface de uma plataforma de acompanhamento e gestão financeira."
+    },
     tools: [
       {
         icon: <SiReact/>,
@@ -38,7 +41,10 @@ const projectsList = [
   {
     image: whatstheanswerImg,
     title: "Whats the answer?",
-    description: "Desafio proposto durante um processo seletivo para desenvolvedor frontend. Trata-se de um formulário de perguntas e respostas sobre assuntos diversos, ao fim temos um resumo das respostas.",
+    description: {
+      id: "app.projects.two.description",
+      messageDefault: "Desafio proposto durante um processo seletivo para desenvolvedor frontend. Trata-se de um formulário de perguntas e respostas sobre assuntos diversos, ao fim temos um resumo das respostas."
+    },
     tools: [
       {
         icon: <SiReact/>,
@@ -55,7 +61,10 @@ const projectsList = [
   {
     image: pokemonImg,
     title: "Pokemon Edu",
-    description: "É um game que tem como finalidade permitir que crianças possam práticar os ensinamentos adquiridos na escola de maneira lúdica usando a temática do jogo POKEMON.",
+    description: {
+      id: "app.projects.three.description",
+      messageDefault: "É um game que tem como finalidade permitir que crianças possam práticar os ensinamentos adquiridos na escola de maneira lúdica usando a temática do jogo POKEMON."
+    },
     tools: [
       {
         icon: <SiReact/>,
@@ -88,9 +97,9 @@ export const Projects: React.FC<ProjectsProps> = ({...props}) => {
         <Typography
           className='subtitle-medium'
           htmlElement='h2'
-        >
-          Projetos
-        </Typography>
+          translateId='app.projects.title'
+          messageDefault='PROJECTS'
+        />
 
         <div className='content'>
           {projectsList.map(item => (
@@ -98,7 +107,8 @@ export const Projects: React.FC<ProjectsProps> = ({...props}) => {
               key={item.title}
               image={item.image}
               title={item.title}
-              description={item.description}
+              translateId={item.description.id}
+              messageDefault={item.description.messageDefault}
               tools={item.tools}
               pageLink={item.pageLink}
               githubLink={item.githubLink}

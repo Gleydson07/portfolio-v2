@@ -19,5 +19,20 @@
   "app.experience.one.position": "Desenvolvedor Front-end",
   "app.experience.one.description-one": "Criar aplicações com interfaces responsivas, criar códigos bem estruturados, eficientes e testáveis, fazendo uso das melhores práticas de desenvolvimento de software. Integrar dados através do consumo de serviços back-end, criar e manter documentação dos softwares desenvolvidos, entre outros.",
   "app.experience.one.description-two": "Ferramentas mais usadas: ReactJS, NextJs, Typescript.",
-  "app.experience.one.date": "09/08/2021 - Atual"
+  "app.experience.one.date": "09/08/2021 - Atual",
+
+  "app.skills.title": "HABILIDADES",
+  "app.skills.react": "Biblioteca criada pelo Facebook com foco na criação de interfaces de forma declarativa, eficiente e flexível.",
+  "app.skills.next": "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada pela Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+  "app.skills.reactnative": "React Native é uma biblioteca Javascript criada pelo Facebook. É usada para desenvolver aplicativos para os sistemas Android e iOS de forma nativa.",
+  "app.skills.firebase": "Firebase é uma plataforma desenvolvida pelo Google para a criação de aplicativos móveis e da web.",
+  "app.skills.figma": "O Figma é uma ferramenta de UI online e gratuita, feita para criar, colaborar, prototipar e inspecionar.",
+  "app.skills.git": "É um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo.",
+
+  "app.projects.title": "PROJETOS",
+  "app.projects.title-used-technology" : "Tecnologias usadas",
+  "app.projects.visit-button": "Visitar",
+  "app.projects.one.description": "Trabalho freelancer de desenvolvimento da interface de uma plataforma de acompanhamento e gestão financeira.",
+  "app.projects.two.description": "Desafio proposto durante um processo seletivo para desenvolvedor front-end. Trata-se de um formulário de perguntas e respostas sobre assuntos diversos, ao fim temos um resumo das respostas.",
+  "app.projects.three.description": "É um game que tem como finalidade permitir que crianças possam práticar os ensinamentos adquiridos na escola de maneira lúdica usando a temática do jogo POKEMON."
 }
