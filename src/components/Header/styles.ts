@@ -18,7 +18,7 @@ export const Container = styled.header`
   
   backdrop-filter: blur(5px);
   
-  div{
+  > div{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -30,6 +30,27 @@ export const Container = styled.header`
     
     margin: 0 auto;
     padding: 0 2rem;
+
+    .logo-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .flag-container{
+        display: flex;
+        align-items: flex-end;
+
+        height: 25px;
+        margin-left: 2rem;
+
+        button{
+          & + button{
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+
     
     span{
       font-size: var(--fontSize48);

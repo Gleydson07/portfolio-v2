@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, useEffect, useState } from 'react';
+import React, { HTMLAttributes, useState } from 'react';
 import Typography from '../../components/Typography';
 
 import {
@@ -7,7 +7,9 @@ import {
   SiFirebase,
   SiFigma,
   SiGit,
-} from 'react-icons/si'
+  SiAzuredevops,
+  SiVisualstudiocode,
+} from 'react-icons/si';
 
 import {
   RiReactjsLine,
@@ -21,51 +23,92 @@ import {
 interface SkillsProps extends HTMLAttributes<HTMLDivElement>{
 }
 
-const skillsDescription = [
-  {
-    id: "react",
-    tool: "ReactJS",
-    description: "Biblioteca criada pelo Facebook com foco na criação de interfaces de forma declarativa, eficiente e flexível."
-  },
-  {
-    id: "next",
-    tool: "NextJS",
-    description: "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada pela Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React."
-  },
-  {
-    id: "reactnative",
-    tool: "React Native",
-    description: "React Native é uma biblioteca Javascript criada pelo Facebook. É usada para desenvolver aplicativos para os sistemas Android e iOS de forma nativa."
-  },
-  {
-    id: "firebase",
-    tool: "Firebase",
-    description: "Firebase é uma plataforma desenvolvida pelo Google para a criação de aplicativos móveis e da web."
-  },
-  {
-    id: "figma",
-    tool: "Figma",
-    description: "O Figma é uma ferramenta de UI online e gratuita, feita para criar, colaborar, prototipar e inspecionar."
-  },
-  {
-    id: "git",
-    tool: "Git",
-    description: "É um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo."
-  },
-  {
-    id: "azure",
-    tool: "Azure",
-    description: "azure"
-  },
-  {
-    id: "vscode",
-    tool: "VS Code",
-    description: "vscode"
-  },
-]
 
 export const Skills: React.FC<SkillsProps> = ({...props}) => {
   const [skillActive, setSkillActive] = useState('');
+  
+  const skillsDescription = [
+    {
+      id: "react",
+      tool: "ReactJS",
+      icon: <SiReact 
+        size="4rem"
+        onMouseEnter={() => setSkillActive("react")}
+        onMouseLeave={() => setSkillActive("")}
+      />,
+      description: "Biblioteca criada pelo Facebook com foco na criação de interfaces de forma declarativa, eficiente e flexível.",
+    },
+    {
+      id: "next",
+      tool: "NextJS",
+      icon: <SiNextdotjs 
+        size="4rem"
+        onMouseEnter={() => setSkillActive("next")}
+        onMouseLeave={() => setSkillActive("")}
+      />,
+      description: "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada pela Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+    },
+    {
+      id: "reactnative",
+      tool: "React Native",
+      icon: <RiReactjsLine 
+        size="4rem"
+        onMouseEnter={() => setSkillActive("reactnative")}
+        onMouseLeave={() => setSkillActive("")}
+      />,
+      description: "React Native é uma biblioteca Javascript criada pelo Facebook. É usada para desenvolver aplicativos para os sistemas Android e iOS de forma nativa.",
+    },
+    {
+      id: "firebase",
+      tool: "Firebase",
+      icon: <SiFirebase 
+        size="4rem"
+        onMouseEnter={() => setSkillActive("firebase")}
+        onMouseLeave={() => setSkillActive("")}
+      />,
+      description: "Firebase é uma plataforma desenvolvida pelo Google para a criação de aplicativos móveis e da web.",
+    },
+    {
+      id: "figma",
+      tool: "Figma",
+      icon: <SiFigma 
+        size="4rem"
+        onMouseEnter={() => setSkillActive("figma")}
+        onMouseLeave={() => setSkillActive("")}
+      />,
+      description: "O Figma é uma ferramenta de UI online e gratuita, feita para criar, colaborar, prototipar e inspecionar.",
+    },
+    {
+      id: "git",
+      tool: "Git",
+      icon: <SiGit 
+        size="4rem"
+        onMouseEnter={() => setSkillActive("git")}
+        onMouseLeave={() => setSkillActive("")}
+      />,
+      description: "É um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo.",
+    },
+    // {
+    //   id: "azure",
+    //   tool: "Azure",
+    //   icon: <SiAzuredevops 
+    //     size="4rem"
+    //     onMouseEnter={() => setSkillActive("azure")}
+    //     onMouseLeave={() => setSkillActive("")}
+    //   />,
+    //   description: "azure",
+    // },
+    // {
+    //   id: "vscode",
+    //   tool: "VS Code",
+    //   icon: <SiVisualstudiocode
+    //     size="4rem"
+    //     onMouseEnter={() => setSkillActive("vscode")}
+    //     onMouseLeave={() => setSkillActive("")}
+    //   />,
+    //   description: "vscode",
+    // },
+  ]
 
   return (
     <Container 
@@ -81,36 +124,20 @@ export const Skills: React.FC<SkillsProps> = ({...props}) => {
         </Typography>
 
         <div className='content'>
-          <SiReact 
-            size="4rem" 
-            onMouseEnter={() => setSkillActive("react")}
-            onMouseLeave={() => setSkillActive("")}
-          />
-          <SiNextdotjs 
-            size="4rem" 
-            onMouseEnter={() => setSkillActive("next")}
-            onMouseLeave={() => setSkillActive("")}
-          />
-          <RiReactjsLine 
-            size="4rem" 
-            onMouseEnter={() => setSkillActive("reactnative")}
-            onMouseLeave={() => setSkillActive("")}
-          />
-          <SiFirebase 
-            size="4rem" 
-            onMouseEnter={() => setSkillActive("firebase")}
-            onMouseLeave={() => setSkillActive("")}
-          />
-          <SiFigma 
-            size="4rem" 
-            onMouseEnter={() => setSkillActive("figma")}
-            onMouseLeave={() => setSkillActive("")}
-          />
-          <SiGit 
-            size="4rem" 
-            onMouseEnter={() => setSkillActive("git")}
-            onMouseLeave={() => setSkillActive("")}
-          />
+          {skillsDescription.map(item => (
+            <div 
+              key={item.id}
+              className="tool-wrapper"
+            >
+              {item.icon}
+              <Typography 
+                className='text'
+                htmlElement='strong'
+              >
+                {item.tool}
+              </Typography>
+            </div>
+          ))}
         </div>
 
         <div className='skill-description-wrapper'>

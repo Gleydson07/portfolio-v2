@@ -1,20 +1,22 @@
 import React, { HTMLAttributes } from 'react';
 
-import Button from '../../components/Button';
 import Typography from '../../components/Typography';
+
 import { svgDevCommiting } from '../../assets/svgs/hero';
 
-import {FiDownload} from 'react-icons/fi'
-
+import {FiDownload} from 'react-icons/fi';
 import { 
   Container,
   Content
 } from './styles';
+import LinkButton from '../../components/LinkButton';
+import { FormattedMessage } from 'react-intl';
 
 interface HeroProps extends HTMLAttributes<HTMLDivElement>{
 }
 
 export const Hero: React.FC<HeroProps> = ({...props}) => {
+  
   return (
     <Container 
       id="home"
@@ -25,9 +27,9 @@ export const Hero: React.FC<HeroProps> = ({...props}) => {
           <Typography 
             className='paragraph' 
             htmlElement='span'
-          >
-            Olá, meu nome é
-          </Typography>
+            translateId='app.hero.hello'
+            messageDefault='Olá, meu nome é'
+          />
 
           <Typography 
             className='title' 
@@ -39,19 +41,24 @@ export const Hero: React.FC<HeroProps> = ({...props}) => {
           <Typography 
             className='subtitle-small' 
             htmlElement='span'
-          >
-            Desenvolvedor front-end web.
-          </Typography>   
+            translateId='app.hero.work'
+            messageDefault='Desenvolvedor front-end.'
+          />  
 
           <div className='cta-container'>
-            <Button 
+            <LinkButton 
               loading={false}
-              icon={<FiDownload size="1rem"/> }
-              text="Download CV"
+              icon={<FiDownload size="1rem"/>}
+              translateId="app.hero.downloadCV"
+              messageDefault="Baixar CV"
+              link={"pdf/gleydson-cv.pdf"}
+              download
             />
 
-            <Button 
-              text="Entre em contato"
+            <LinkButton 
+              translateId="app.hero.contact"
+              messageDefault="Entre em contato"
+              link={"https://api.whatsapp.com/send?phone=558281114246&text=Ol%C3%A1!!"}
             />
           </div>    
         </section>

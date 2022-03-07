@@ -24,8 +24,7 @@ export const Content = styled.div<StyleSkillsProps>`
 
   .content{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
     margin: 0 auto;
     margin-top: 8rem;
@@ -42,9 +41,25 @@ export const Content = styled.div<StyleSkillsProps>`
       color: var(--dark-200);
 
       transition: all 0.2s;
+    }
+
+    .tool-wrapper{
+      width: 120px;
+
+      text-align: center;
+      margin-bottom: 2rem;
+
+      strong{
+        display: block;
+
+        text-align: center;
+        color: var(--dark-200);
+      }
 
       &:hover{
-        color: var(--yellow-500);
+        svg, strong{
+          color: var(--yellow-500);
+        }
       }
     }
   }

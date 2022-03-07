@@ -44,7 +44,7 @@ export const Content = styled.div`
 
       margin-top: var(--fontSize32);
 
-      button:first-child{
+      a:first-child{
         margin-right: var(--fontSize16);
       }
     }

@@ -1,0 +1,23 @@
+{
+  "app.header.home" : "Início",
+  "app.header.about" : "Sobre mim",
+  "app.header.experience" : "Experiências",
+  "app.header.skills" : "Habilidades",
+  "app.header.projects" : "Projetos",
+
+  "app.hero.hello": "Olá, meu nome é",
+  "app.hero.work": "Desenvolvedor Front-end.",
+  "app.hero.downloadCV": "Baixar CV",
+  "app.hero.contact": "Entre em contato",
+
+  "app.about.title": "SOBRE MIM",
+  "app.about.paragraph-one": "Formado em Sistemas de informação em 2018 e atualmente pós-graduando em Engenharia de Software, sempre me considerei um entusiasta de tecnologia e seus impactos na sociedade. Gosto de desafios e busco frequentemente me colocar fora da zona de conforto.",
+  "app.about.paragraph-two": "Ao passo que aprimoro minhas habilidades e amplio meu conhecimento, percebo que o aprendizado é um processo prazeroso e infinito de constante evolução.",
+
+  "app.experience.title": "EXPERIÊNCIA",
+  "app.experience.one.company": "E-Confi",
+  "app.experience.one.position": "Desenvolvedor Front-end",
+  "app.experience.one.description-one": "Criar aplicações com interfaces responsivas, criar códigos bem estruturados, eficientes e testáveis, fazendo uso das melhores práticas de desenvolvimento de software. Integrar dados através do consumo de serviços back-end, criar e manter documentação dos softwares desenvolvidos, entre outros.",
+  "app.experience.one.description-two": "Ferramentas mais usadas: ReactJS, NextJs, Typescript.",
+  "app.experience.one.date": "09/08/2021 - Atual"
+}

@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       {loading ?
         <Loading/>
-        : <>{icon} {text}</>
+        : <>{icon} <span>{text}</span></>
       }
     </Container>
   );

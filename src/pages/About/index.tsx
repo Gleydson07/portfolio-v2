@@ -32,9 +32,9 @@ export const About: React.FC<AboutProps> = ({...props}) => {
         <Typography
           className='subtitle-medium'
           htmlElement='h2'
-        >
-          SOBRE MIM
-        </Typography>
+          translateId='app.about.title'
+          messageDefault='SOBRE MIM'
+        />
 
         <div className='content'>
           <figure>
@@ -44,17 +44,16 @@ export const About: React.FC<AboutProps> = ({...props}) => {
             <Typography
               className='phrase'
               htmlElement='p'
-            >
-              Formado em Sistemas de informação em 2018 e atualmente pós-graduando em Engenharia de Software, sempre me considerei um entusiasta de tecnologia e seus impactos na sociedade. Gosto de desafios e busco 
-              frequentemente me colocar fora da zona de conforto.
-            </Typography>
+              translateId='app.about.paragraph-one'
+              messageDefault='Formado em Sistemas de informação em 2018 e atualmente pós-graduando em Engenharia de Software, sempre me considerei um entusiasta de tecnologia e seus impactos na sociedade. Gosto de desafios e busco frequentemente me colocar fora da zona de conforto.'
+            />
             
             <Typography
               className='phrase'
               htmlElement='p'
-            >
-              Ao passo que aprimoro minhas habilidades e amplio meu conhecimento, percebo que o aprendizado é um processo prazeroso e infinito de constante evolução.
-            </Typography>
+              translateId='app.about.paragraph-two'
+              messageDefault='Ao passo que aprimoro minhas habilidades e amplio meu conhecimento, percebo que o aprendizado é um processo prazeroso e infinito de constante evolução.'
+            />
 
           </div>
         </div>

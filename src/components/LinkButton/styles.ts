@@ -24,15 +24,22 @@ export const Container = styled.a<StyleButtonProps>`
 
   text-decoration: none;
 
+  span{
+    display: block;
+    font-size: 12px;
+
+    ${({hasIconAndText}) => hasIconAndText && css`
+      padding-left: var(--fontSize4);
+    `}
+  }
+
   &:hover{
     filter: brightness(0.8);
   }
   
   svg{
-    color: var(--yellow-500);
-    ${({hasIconAndText}) => hasIconAndText && css`
-      margin-right: var(--fontSize4);
-    `}
+    display: block;
+    color: var(--yellow-500);    
   }
 ;
 `

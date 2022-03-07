@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 
 import { Hero } from './pages/Hero';
@@ -8,11 +8,36 @@ import { Skills } from './pages/Skills';
 import { Projects } from './pages/Projects';
 
 import { GlobalStyle } from './styles/theme';
+import { IntlProvider } from 'react-intl';
+
+import langPortugueseBrazil from "./lang/pt-br.json";
+import langEnglish from "./lang/en-us.json";
+import langSpanish from "./lang/es.json";
 
 
 function App() {
+  const [currentLanguageFile, setCurrentLanguageFile] = useState(langEnglish);
+
+  const loadLocale = () => {
+    const localeSelected = localStorage.getItem("gsantos@lang") || navigator.language;
+  
+    if(localeSelected === "pt-BR"){
+      setCurrentLanguageFile(langPortugueseBrazil);
+    }else if(localeSelected === "es"){
+      setCurrentLanguageFile(langSpanish);
+    }else{
+      setCurrentLanguageFile(langEnglish);
+    }    
+  }  
+  
+  useEffect(() => {
+    console.log(navigator.language)
+    loadLocale();
+  }, [])
+
+
   return (
-    <div>
+    <IntlProvider locale={navigator.language} messages={currentLanguageFile}>
       <GlobalStyle/>
       <Header/>
       <Hero/>
@@ -20,7 +45,7 @@ function App() {
       <Experience/>
       <Skills/>
       <Projects/>
-    </div>
+    </IntlProvider>
   );
 }
 

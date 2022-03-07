@@ -20,10 +20,10 @@ const Tooltip: React.FC<TooltipProps> = ({
 
   return (
     <Container position={position}>
-      <div className={show ? 'tooltip-box visible' : 'tooltip-box'} aria-describedby={title}>
+      {title ? <div className={show ? 'tooltip-box visible' : 'tooltip-box'} aria-describedby={title}>
           {title}
           <span className="tooltip-arrow" />
-      </div>
+      </div> : ""}
       <div
         onMouseEnter={() => setShow(true)}
         onMouseLeave={() => setShow(false)}

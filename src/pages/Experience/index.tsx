@@ -12,34 +12,31 @@ interface ExperienceProps extends HTMLAttributes<HTMLDivElement>{
 
 const tabContent = [
   {
-    company: "E-Confi",
+    company: {
+      id: "app.experience.one.company",
+      messageDefault: "E-Confi"
+    },
     work: {
-      position: "Desenvolvedor web front-end",
+      position: {
+        id: "app.experience.one.position",
+        messageDefault: "Desenvolvedor web front-end",
+      },
       descriptions: [
-        "Criar aplicações com interfaces responsivas, criar códigos bem estruturados, eficientes e testáveis, fazendo uso das melhores práticas de desenvolvimento de software. Integrar dados através do consumo de serviços back-end, criar e manter documentação dos softwares desenvolvidos, entre outros.",
-
-        "Ferramentas mais usadas: ReactJS, NextJs, Typescript."
+        {
+          id: "app.experience.one.description-one",
+          messageDefault: "Criar aplicações com interfaces responsivas, criar códigos bem estruturados, eficientes e testáveis, fazendo uso das melhores práticas de desenvolvimento de software. Integrar dados através do consumo de serviços back-end, criar e manter documentação dos softwares desenvolvidos, entre outros."
+        },
+        {
+          id: "app.experience.one.description-two",
+          messageDefault: "Ferramentas mais usadas: ReactJS, NextJs, Typescript."
+        }        
       ],
       date: {
-        initial: "09/08/2021",
-        final: "Atual"
-      }
+        id: "app.experience.one.date",
+        messageDefault: "09/08/2021 - Atual"
+      },
     },
-  },
-  {
-    company: "AglSolutions",
-    work: {
-      position: "Desenvolvedor web front-end",
-      descriptions: [
-        "Desenvolvimento de uma solução que envolve o mercado financeiro, permitindo que seus clientes possam tomar decisões de acordo com os dados fornecidos. ",
-
-        "Ferramentas mais usadas: ReactJS, Typescript, Styled-Components."
-      ],
-      date: {
-        initial: "Freelancer",
-      }
-    },
-  },
+  }
 ]
 
 export const Experience: React.FC<ExperienceProps> = ({...props}) => {
@@ -52,9 +49,9 @@ export const Experience: React.FC<ExperienceProps> = ({...props}) => {
         <Typography
           className='subtitle-medium'
           htmlElement='h2'
-        >
-          EXPERIÊNCIA
-        </Typography>
+          translateId='app.experience.title'
+          messageDefault='EXPERIÊNCIA'
+        />
 
         <div className='content'>
           <Tab

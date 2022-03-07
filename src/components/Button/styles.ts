@@ -22,6 +22,10 @@ export const Container = styled.button<StyleButtonProps>`
 
   color: var(--yellow-500);
 
+  span{
+    font-size: 12px;
+  }
+
   &:hover{
     filter: brightness(0.8);
   }

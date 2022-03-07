@@ -1,0 +1,23 @@
+{
+  "app.header.home" : "Home",
+  "app.header.about" : "About me",
+  "app.header.experience" : "Experience",
+  "app.header.skills" : "Skills",
+  "app.header.projects" : "Projects",
+
+  "app.hero.hello": "Hello, my name is",
+  "app.hero.work": "Front-end developer.",
+  "app.hero.downloadCV": "Download CV",
+  "app.hero.contact": "Contact",
+
+  "app.about.title": "ABOUT ME",
+  "app.about.paragraph-one": "Graduated in Information Systems in 2018 and currently a graduate student in Software Engineering, I have always considered myself an enthusiast of technology and its impacts on society. I like challenges and I often try to put myself out of my comfort zone.",
+  "app.about.paragraph-two": "As I improve my skills and expand my knowledge, I realize that learning is a pleasurable and infinite process of constant evolution." ,
+
+  "app.experience.title": "EXPERIENCE",
+  "app.experience.one.company": "E-Confi",
+  "app.experience.one.position": "Front-end developer",
+  "app.experience.one.description-one": "Create applications with responsive interfaces, create well-structured, efficient and testable codes, making use of software development best practices. Integrate data through the consumption of back-end services, create and maintain documentation of the developed software, among others.",
+  "app.experience.one.description-two": "Most used tools: ReactJS, NextJs, Typescript.",
+  "app.experience.one.date": "09/08/2021 - Current"
+}
