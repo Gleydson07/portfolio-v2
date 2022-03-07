@@ -20,6 +20,30 @@ export const Container = styled.div`
 
     background: var(--yellow-500);
   }
+
+  @media(max-width: 1100px){
+
+    .circle-yellow{
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      border-radius: 150px;
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  @media(max-width: 900px){
+
+    .circle-yellow{
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      border-radius: 100px;
+      width: 200px;
+      height: 200px;
+    }
+  }
 `;
 
 export const Content = styled.div`  
@@ -80,6 +104,51 @@ export const Content = styled.div`
      
       &:not(:first-child){
         margin-left: 2.5rem;
+      }
+    }
+  }
+
+  @media(max-width: 1100px){
+    h2{
+      font-size: 1.5rem;
+    }
+
+    .content{
+      figure{
+        min-width: 180px;
+        min-height: 180px;
+
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      p{
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media(max-width: 900px){
+    .content{
+      display: flex;
+      flex-direction: column;
+
+      figure{
+        min-width: 120px;
+        width: 120px;
+        min-height: 120px;
+        height: 120px;
+
+        margin: 0;
+        padding: 0;
+
+        img{
+          width: 100%;
+          height: auto;
+        }
+        margin-bottom: 2rem;
       }
     }
   }

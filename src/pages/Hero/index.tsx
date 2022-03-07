@@ -10,7 +10,6 @@ import {
   Content
 } from './styles';
 import LinkButton from '../../components/LinkButton';
-import { FormattedMessage } from 'react-intl';
 
 interface HeroProps extends HTMLAttributes<HTMLDivElement>{
 }

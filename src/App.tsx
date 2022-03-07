@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import { Skills } from './pages/Skills';
+import { Hero } from './pages/Hero';
+import { About } from './pages/About';
+import { Experience } from './pages/Experience';
+import { Projects } from './pages/Projects';
 
 import { IntlProvider } from 'react-intl';
 import { GlobalStyle } from './styles/theme';
@@ -34,10 +38,10 @@ function App() {
     <IntlProvider locale={navigator.language} messages={currentLanguageFile}>
       <GlobalStyle/>
       <Header/>
-      {/* <Hero/> */}
-      {/* <About/> */}
+      <Hero/>
+      <About/>
       {/* <Experience/> */}
-      <Skills/>
+      {/* <Skills/> */}
       {/* <Projects/> */}
     </IntlProvider>
   );
