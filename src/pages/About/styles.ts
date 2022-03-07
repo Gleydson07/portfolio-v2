@@ -131,6 +131,10 @@ export const Content = styled.div`
   }
 
   @media(max-width: 900px){
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     .content{
       display: flex;
       flex-direction: column;

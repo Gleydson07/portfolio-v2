@@ -11,8 +11,13 @@ export const Container = styled.div`
   justify-content: center;
 
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh);
   overflow: hidden;
+  
+  @media(max-width: 900px){
+    height: calc(100vh - 2rem);  
+    margin-top: 2rem;
+  }
 `;
 
 export const Content = styled.div<StyleSkillsProps>`  
@@ -104,6 +109,21 @@ export const Content = styled.div<StyleSkillsProps>`
 
         color: var(--dark-200);
       }
+    }
+  }
+
+  @media(max-width: 900px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    .content{
+      margin-top: 4rem;
+    }
+
+    .skill-description-wrapper{
+      margin-top: 1rem;
     }
   }
 `;

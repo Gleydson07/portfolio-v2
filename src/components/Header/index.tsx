@@ -151,7 +151,6 @@ const Header: React.FC = () => {
             distance="md"
             duration={0.8}
             size={32}
-            onToggle={() => !isOpenMenuBurger && console.log("open")}
           />
         </div>
       </div>

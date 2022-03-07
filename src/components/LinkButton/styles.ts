@@ -9,7 +9,8 @@ export const Container = styled.a<StyleButtonProps>`
   align-items: center;
   justify-content: center;
 
-  min-width: 135px;
+  width: 100%;
+  max-width: 135px;
   max-height: 46px;
   padding: 0.875rem;
 
@@ -28,6 +29,8 @@ export const Container = styled.a<StyleButtonProps>`
     display: block;
     font-size: 12px;
 
+    white-space: nowrap;
+
     ${({hasIconAndText}) => hasIconAndText && css`
       padding-left: var(--fontSize4);
     `}
@@ -40,6 +43,11 @@ export const Container = styled.a<StyleButtonProps>`
   svg{
     display: block;
     color: var(--yellow-500);    
+  }
+
+  @media(max-width: 900px){
+    max-width: 120px;
+    max-height: 38px;
   }
 ;
 `

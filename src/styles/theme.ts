@@ -74,7 +74,6 @@ export const GlobalStyle = createGlobalStyle`
     &::-webkit-scrollbar-track-piece{
       background: transparent;
     }
-
   }
 
   body, input, textarea, button{

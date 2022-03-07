@@ -36,6 +36,27 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media(max-width: 900px){
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 1rem;
+
+    aside{
+      display: flex;
+      width: 100%;
+
+      margin-right: 0;
+      margin-bottom: 1rem;
+
+      button{
+        margin-right: 0.5rem;
+        width: fit-content;
+      }
+    }
+  }
 `
 
 export const Content = styled.div`

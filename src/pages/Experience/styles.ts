@@ -21,6 +21,29 @@ export const Container = styled.div`
 
     background: var(--orange-700);
   }
+
+  @media(max-width: 1100px){
+
+    .circle-orange{
+      position: absolute;
+      bottom: 0;
+      left: -100px;
+      border-radius: 100px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media(max-width: 900px){
+    .circle-orange{
+      position: absolute;
+      bottom: 0;
+      left: -60px;
+      border-radius: 60px;
+      width: 120px;
+      height: 120px;
+    }
+  }
 `;
 
 export const Content = styled.div`  
@@ -37,5 +60,16 @@ export const Content = styled.div`
 
     margin: 3rem auto;
     max-width: 1200px;
+  }
+
+  @media(max-width: 900px){
+    h2{
+      text-align: center;
+    }
+
+    .content{
+      margin: 0;
+      margin-top: 1rem;
+    }
   }
 `;

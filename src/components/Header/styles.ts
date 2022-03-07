@@ -16,11 +16,12 @@ const fillWidth = keyframes`
 
 export const Container = styled.header<StyleHeaderProps>`
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 70px;
   z-index: 1;
   
   backdrop-filter: blur(5px);
+  background: var(--dark-opacity);
   
   > div{
     display: flex;
