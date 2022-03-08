@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
   :root{
     --dark-gradient: linear-gradient(90deg, #091124 46.35%, #202D3A 100%);
     --orange-gradient: linear-gradient(180deg, #FFB802 0%, #FA741B 100%);
+    --dark-opacity: #09122580;
     --dark-900: #091225;
     --dark-800: #1F2B45;
     --dark-700: #252532;
