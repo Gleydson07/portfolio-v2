@@ -10,6 +10,7 @@ import {
   Content
 } from './styles';
 import LinkButton from '../../components/LinkButton';
+import Button from '../../components/Button';
 
 interface HeroProps extends HTMLAttributes<HTMLDivElement>{
 }
@@ -59,7 +60,15 @@ export const Hero: React.FC<HeroProps> = ({...props}) => {
               messageDefault="Entre em contato"
               link={"https://api.whatsapp.com/send?phone=558281114246&text=Ol%C3%A1!!"}
             />
-          </div>    
+
+            <Button
+              loading={false}
+              disabled={false}
+              text="testing"
+              icon={<FiDownload size="1rem"/>}
+              onClick={() => console.log("teste")}
+            />
+          </div>
         </section>
 
         <figure>

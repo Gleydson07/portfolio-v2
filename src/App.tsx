@@ -33,7 +33,6 @@ function App() {
     loadLocale();
   }, [])
 
-
   return (
     <IntlProvider locale={navigator.language} messages={currentLanguageFile}>
       <GlobalStyle/>
