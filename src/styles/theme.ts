@@ -47,34 +47,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    width: fit-content;
-
     font-family: 'Inter', sans-serif;
     background: var(--dark-gradient);
 
     -webkit-font-smoothing: antialiased;
 
     overflow-x: hidden;
-
-    &::-webkit-scrollbar { 
-      position: absolute;
-      display: visible;
-      /* width: 12px; */
-    }
-    
-    &::-webkit-scrollbar-thumb {
-      background-color: var(--dark-900); 
-      border-radius: 4px; 
-      border: 1px solid var(--dark-400);
-    }
-    
-    &::-webkit-scrollbar-track {
-      background: var(--dark-800); 
-    }
-    
-    &::-webkit-scrollbar-track-piece{
-      background: transparent;
-    }
+    /* width: calc(100vw - 12px); */
   }
 
   body, input, textarea, button{

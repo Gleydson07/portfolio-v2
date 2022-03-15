@@ -16,6 +16,8 @@ const fillWidth = keyframes`
 
 export const Container = styled.header<StyleHeaderProps>`
   position: fixed;
+  top: 0;
+  
   width: 100%;
   height: 70px;
   z-index: 1;
@@ -142,18 +144,18 @@ export const Container = styled.header<StyleHeaderProps>`
   }
 
   @media(max-width: 900px){
+    
     > div{
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       nav{
         position: fixed;
         top: 5rem;
         left: 0;      
         
         width: 100%;
-        height: calc(100vh - 5rem);
+        height: calc(100vh - 4.95rem);
         padding: 0;
         
         background: var(--dark-900);
