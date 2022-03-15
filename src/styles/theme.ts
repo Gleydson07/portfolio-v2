@@ -47,8 +47,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    width: 100vw;
-    height: auto;
+    width: fit-content;
 
     font-family: 'Inter', sans-serif;
     background: var(--dark-gradient);
@@ -60,7 +59,7 @@ export const GlobalStyle = createGlobalStyle`
     &::-webkit-scrollbar { 
       position: absolute;
       display: visible;
-      width: 12px;
+      /* width: 12px; */
     }
     
     &::-webkit-scrollbar-thumb {
