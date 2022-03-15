@@ -7,8 +7,6 @@ import {
   SiFirebase,
   SiFigma,
   SiGit,
-  SiAzuredevops,
-  SiVisualstudiocode,
 } from 'react-icons/si';
 
 import {

@@ -10,7 +10,6 @@ import {
   Content
 } from './styles';
 import LinkButton from '../../components/LinkButton';
-import Button from '../../components/Button';
 
 interface HeroProps extends HTMLAttributes<HTMLDivElement>{
 }

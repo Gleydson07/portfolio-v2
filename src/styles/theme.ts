@@ -47,6 +47,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
+    width: 100vw;
+    height: auto;
+
     font-family: 'Inter', sans-serif;
     background: var(--dark-gradient);
 
@@ -64,8 +67,6 @@ export const GlobalStyle = createGlobalStyle`
       background-color: var(--dark-900); 
       border-radius: 4px; 
       border: 1px solid var(--dark-400);
-
-      width: 100%;
     }
     
     &::-webkit-scrollbar-track {

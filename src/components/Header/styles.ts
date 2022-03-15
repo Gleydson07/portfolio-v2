@@ -16,7 +16,7 @@ const fillWidth = keyframes`
 
 export const Container = styled.header<StyleHeaderProps>`
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 70px;
   z-index: 1;
   
@@ -153,8 +153,9 @@ export const Container = styled.header<StyleHeaderProps>`
         left: 0;      
         
         width: 100%;
+        height: calc(100vh - 5rem);
         padding: 0;
-        height: calc(100vh - 4.975rem);
+        
         background: var(--dark-900);
 
         ${({ openMenuBurger }) => openMenuBurger 

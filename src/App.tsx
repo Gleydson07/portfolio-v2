@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
-import { Skills } from './pages/Skills';
 import { Hero } from './pages/Hero';
 import { About } from './pages/About';
 import { Experience } from './pages/Experience';
+import { Skills } from './pages/Skills';
 import { Projects } from './pages/Projects';
 
 import { IntlProvider } from 'react-intl';
