@@ -2,12 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
+  padding-top: 70px;
 
-  display: flex;
-  justify-content: center;
-
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 85vh;
   overflow: hidden;
 
   .circle-orange{
@@ -18,12 +16,11 @@ export const Container = styled.div`
     width: 300px;
     height: 300px;
 
-
     background: var(--orange-700);
+    z-index: -1;
   }
 
   @media(max-width: 1100px){
-
     .circle-orange{
       position: absolute;
       bottom: 0;
@@ -57,9 +54,16 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    margin: 3rem auto;
+    
+    margin: 0 auto;
+    margin-top: 5rem;
     max-width: 1200px;
+  }
+
+  @media(max-width: 1100px){
+    h2{
+      font-size: var(--fontSize24);
+    }
   }
 
   @media(max-width: 900px){
@@ -68,8 +72,8 @@ export const Content = styled.div`
     }
 
     .content{
-      margin: 0;
-      margin-top: 1rem;
+      /* margin: 0; */
+      /* margin-top: 1rem; */
     }
   }
 `;

@@ -13,7 +13,6 @@ import {
   SiGmail
 } from 'react-icons/si'
 
-
 import { 
   Container,
   Content
@@ -76,6 +75,6 @@ export const About: React.FC<AboutProps> = ({...props}) => {
       </Content>
 
       <span className='circle-yellow'></span>
-    </Container>
+    </Container>   
   );
 }

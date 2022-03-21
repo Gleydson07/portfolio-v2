@@ -53,7 +53,25 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
 
     overflow-x: hidden;
-    /* width: calc(100vw - 12px); */
+
+    &::-webkit-scrollbar { 
+      position: absolute;
+      display: visible;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--dark-900); 
+      border-radius: 4px; 
+      border: 1px solid var(--dark-400);
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: var(--dark-800); 
+    }
+    
+    &::-webkit-scrollbar-track-piece{
+      background: transparent;
+    }
   }
 
   body, input, textarea, button{

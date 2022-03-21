@@ -5,20 +5,35 @@ export const Container = styled.div`
 
   display: flex;
   justify-content: center;
+  align-items: center;
 
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 85vh;
   overflow: hidden;
 
   .circle-yellow{
     position: absolute;
-    bottom: -225px;
-    right: -225px;
-    border-radius: 225px;
-    width: 450px;
-    height: 450px;
+    bottom: -200px;
+    right: -200px;
+    border-radius: 200px;
+    width: 400px;
+    height: 400px;
+
+    z-index: -1;
 
     background: var(--yellow-500);
+  }
+
+  @media(max-width: 1440px){
+
+    .circle-yellow{
+      position: absolute;
+      bottom: -170px;
+      right: -170px;
+      border-radius: 170px;
+      width: 340px;
+      height: 340px;
+    }
   }
 
   @media(max-width: 1100px){
@@ -34,7 +49,6 @@ export const Container = styled.div`
   }
 
   @media(max-width: 900px){
-
     .circle-yellow{
       position: absolute;
       bottom: -100px;
@@ -52,7 +66,7 @@ export const Content = styled.div`
   align-items: center;
   
   width: 100%;
-  max-width: 1440px;
+  max-width: 1400px;
 
   padding: 0 var(--fontSize32);
 
@@ -75,8 +89,8 @@ export const Content = styled.div`
   }
 
   figure{
-    max-width: 450px;
-    height: 410px;
+    max-width: 400px;
+    height: 360px;
 
     margin-left: 2rem;
 
@@ -92,7 +106,6 @@ export const Content = styled.div`
       height: 310px;
 
       margin-left: 2rem;
-      margin-top: 5rem;
 
       svg{
         width: 100%;
@@ -105,6 +118,7 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
+    align-items: center;
     margin-top: 70px;
     margin-left: 0;
     
@@ -122,6 +136,7 @@ export const Content = styled.div`
 
     .presentation{
       margin-top: 2rem;
+      text-align: center;
 
       h4{
         font-size: 2rem;
@@ -131,6 +146,11 @@ export const Content = styled.div`
       > span:nth-child(3){
         font-size: 1.25rem;
       }
+    }
+
+    .cta-container{
+      display: flex;
+      justify-content: center;
     }
   }
 `;

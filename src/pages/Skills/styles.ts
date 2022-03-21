@@ -6,16 +6,13 @@ interface StyleSkillsProps {
 
 export const Container = styled.div`
   position: relative;
+  padding-top: 70px;
 
-  display: flex;
-  justify-content: center;
-
-  width: 100vw;
-  height: calc(100vh);
+  width: 100%;
+  min-height: 85vh;
   overflow: hidden;
   
   @media(max-width: 900px){
-    height: calc(100vh - 2rem);  
     margin-top: 2rem;
   }
 `;
@@ -23,16 +20,17 @@ export const Container = styled.div`
 export const Content = styled.div<StyleSkillsProps>`  
   width: 100%;
   max-width: 1440px;
+  height: 100%;
 
-  margin: auto;
+  margin: 0 auto;
   padding: 0 var(--fontSize32);
-
+  
   .content{
     display: flex;
     justify-content: space-around;
 
-    margin: 0 auto;
-    margin-top: 8rem;
+    margin: auto;
+    margin-top: 12rem;
     max-width: 1200px;
 
     flex-wrap: wrap;
@@ -44,7 +42,6 @@ export const Content = styled.div<StyleSkillsProps>`
 
     svg{
       color: var(--dark-200);
-
       transition: all 0.2s;
     }
 
@@ -76,8 +73,7 @@ export const Content = styled.div<StyleSkillsProps>`
     margin: 0 auto;
     margin-top: 4rem;
 
-    transition: all 0.2s;
-    
+    transition: all 0.2s;    
     
     .skill-description{
       visibility: ${({skillDescriptionVisibility}) => skillDescriptionVisibility ? "visible" : "hidden"};
@@ -85,7 +81,6 @@ export const Content = styled.div<StyleSkillsProps>`
       display: flex;
       flex-direction: column;
       justify-content: center;
-
 
       min-width: 100%;
       min-height: auto;
@@ -109,6 +104,12 @@ export const Content = styled.div<StyleSkillsProps>`
 
         color: var(--dark-200);
       }
+    }
+  }
+
+  @media(max-width: 1100px){
+    h2{
+      font-size: var(--fontSize24);
     }
   }
 

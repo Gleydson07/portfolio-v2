@@ -19,7 +19,7 @@ export const Container = styled.header<StyleHeaderProps>`
   top: 0;
   
   width: 100%;
-  height: 70px;
+  min-height: 70px;
   z-index: 1;
   
   backdrop-filter: blur(5px);
@@ -34,7 +34,7 @@ export const Container = styled.header<StyleHeaderProps>`
     height: 100%;
     
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--fontSize32);
 
     span{
       font-size: var(--fontSize48);
@@ -130,6 +130,7 @@ export const Container = styled.header<StyleHeaderProps>`
   }
 
   @media(max-width: 1100px){
+    top: 0;
     > div{
       span{
         font-size: var(--fontSize32);
@@ -143,8 +144,8 @@ export const Container = styled.header<StyleHeaderProps>`
     }
   }
 
-  @media(max-width: 900px){
-    
+  @media(max-width: 900px){    
+    top: 0;
     > div{
       display: flex;
       justify-content: space-between;

@@ -2,27 +2,37 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
+  padding-top: 70px;
 
-  display: flex;
-  justify-content: center;
-
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 85vh;
   overflow: hidden;
 
   .circle-yellow{
     position: absolute;
-    top: -225px;
-    right: -225px;
-    border-radius: 225px;
-    width: 450px;
-    height: 450px;
+    top: -200px;
+    right: -200px;
+    border-radius: 200px;
+    width: 400px;
+    height: 400px;
+
+    z-index: -1;
 
     background: var(--yellow-500);
   }
-
+  
+  @media(max-width: 1440px){
+    .circle-yellow{
+      position: absolute;
+      top: -170px;
+      right: -170px;
+      border-radius: 170px;
+      width: 340px;
+      height: 340px;
+    }
+  }
+  
   @media(max-width: 1100px){
-
     .circle-yellow{
       position: absolute;
       top: -150px;
@@ -34,7 +44,6 @@ export const Container = styled.div`
   }
 
   @media(max-width: 900px){
-
     .circle-yellow{
       position: absolute;
       top: -100px;
@@ -44,22 +53,30 @@ export const Container = styled.div`
       height: 200px;
     }
   }
+
 `;
 
 export const Content = styled.div`  
   width: 100%;
+  height: 100%;
   max-width: 1440px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   margin: auto;
   padding: 0 var(--fontSize32);
-
+  
   .content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    margin: 3rem auto;
+    margin: 0 auto;
+    margin-top: 12rem;
     max-width: 1200px;
+    height: 100%;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
     figure{
       width: 225px;
@@ -89,6 +106,7 @@ export const Content = styled.div`
     align-items: center;
 
     max-width: 400px;
+    height: 100px;
     margin: auto;
 
     a{        
@@ -110,7 +128,7 @@ export const Content = styled.div`
 
   @media(max-width: 1100px){
     h2{
-      font-size: 1.5rem;
+      font-size: var(--fontSize24);
     }
 
     .content{
@@ -131,13 +149,21 @@ export const Content = styled.div`
   }
 
   @media(max-width: 900px){
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+      text-align: center;
+
+      margin-bottom: 2rem;
+    }
+
     .content{
       display: flex;
       flex-direction: column;
+      margin: 2rem auto;
 
       figure{
         min-width: 120px;
@@ -154,6 +180,10 @@ export const Content = styled.div`
         }
         margin-bottom: 2rem;
       }
+    }
+
+    .social-medias{
+      margin-top: 3rem;
     }
   }
 `;
