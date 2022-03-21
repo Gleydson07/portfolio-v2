@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
 
   width: 100%;
-  min-height: 85vh;
+  min-height: 100vh;
   overflow: hidden;
 
   .circle-yellow{

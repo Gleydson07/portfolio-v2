@@ -30,7 +30,7 @@ export const Content = styled.div<StyleSkillsProps>`
     justify-content: space-around;
 
     margin: auto;
-    margin-top: 12rem;
+    margin-top: 10rem;
     max-width: 1200px;
 
     flex-wrap: wrap;

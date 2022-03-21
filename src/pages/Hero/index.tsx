@@ -45,14 +45,14 @@ export const Hero: React.FC<HeroProps> = ({...props}) => {
           />  
 
           <div className='cta-container'>
-            <LinkButton 
+            {/* <LinkButton 
               loading={false}
               icon={<FiDownload size="1rem"/>}
               translateId="app.hero.downloadCV"
               messageDefault="Baixar CV"
               link={"pdf/gleydson-cv.pdf"}
               download
-            />
+            /> */}
 
             <LinkButton 
               translateId="app.hero.contact"
