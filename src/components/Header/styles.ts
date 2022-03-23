@@ -17,6 +17,9 @@ const fillWidth = keyframes`
 export const Container = styled.header<StyleHeaderProps>`
   position: fixed;
   top: 0;
+
+  display: flex;
+  align-items: center;
   
   width: 100%;
   min-height: 70px;

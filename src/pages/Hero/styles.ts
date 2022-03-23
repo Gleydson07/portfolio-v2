@@ -1,4 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const float = keyframes`
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-30px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+`
 
 export const Container = styled.div`
   position: relative;
@@ -71,7 +83,6 @@ export const Content = styled.div`
   padding: 0 var(--fontSize32);
 
   .presentation{
-
     h4{
       margin-top: var(--fontSize8);
       margin-bottom: 54px;
@@ -93,6 +104,9 @@ export const Content = styled.div`
     height: 360px;
 
     margin-left: 2rem;
+
+    transform: translateY(0px);
+    animation: ${float} 5s ease-in-out infinite;
 
     svg{
       width: 100%;
