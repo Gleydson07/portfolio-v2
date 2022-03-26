@@ -75,7 +75,7 @@ export const Container = styled.header<StyleHeaderProps>`
         ul{
           display: flex;
           list-style: none;
-  
+          
           li{
             display: list-item;
             text-align: -webkit-match-parent;
@@ -206,10 +206,11 @@ export const Container = styled.header<StyleHeaderProps>`
             flex-direction: column;
             align-self: flex-end;
             align-items: flex-end;
-  
+            width: 100%;
+            
             li, li:last-child{
               padding: 0.5rem 2rem;
-              width: fit-content;
+              width: 100%;
               
               &:first-child{
                 margin-top: 1.5rem;
@@ -219,9 +220,12 @@ export const Container = styled.header<StyleHeaderProps>`
                 display: block;
                 font-size: 1.25rem;
                 font-weight: 700;
+                width: fit-content;
                 
                 text-align: center;
                 height: 2.25rem;
+
+                margin: 0 auto;
               }
             }
           }  
