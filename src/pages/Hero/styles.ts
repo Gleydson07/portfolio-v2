@@ -1,4 +1,8 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+
+interface HeroProps {
+  theme: string;
+}
 
 const float = keyframes`
   0%{
@@ -12,7 +16,7 @@ const float = keyframes`
   }
 `
 
-export const Container = styled.div`
+export const Container = styled.div<HeroProps>`
   position: relative;
 
   display: flex;
@@ -22,6 +26,12 @@ export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
+  
+  background: ${({theme}) => 
+    theme === "light" 
+    ? css`var(--white-400)` 
+    : css`var(--dark-gradient)`
+  };
 
   .circle-yellow{
     position: absolute;
@@ -30,8 +40,6 @@ export const Container = styled.div`
     border-radius: 200px;
     width: 400px;
     height: 400px;
-
-    z-index: -1;
 
     background: var(--yellow-500);
   }
@@ -72,7 +80,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Content = styled.div`
+export const Content = styled.div<HeroProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,9 +91,22 @@ export const Content = styled.div`
   padding: 0 var(--fontSize32);
 
   .presentation{
+    > span{
+      color: ${({theme}) => 
+        theme === "light" 
+        ? css`var(--dark-900)` 
+        : css`var(--white-400)`
+      };
+    }
+
     h4{
       margin-top: var(--fontSize8);
-      margin-bottom: 54px;
+      margin-bottom: 32px;
+      color: ${({theme}) => 
+        theme === "light" 
+        ? css`var(--yellow-500)` 
+        : css`var(--white-400)`
+      };
     }
 
     .cta-container{

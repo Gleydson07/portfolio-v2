@@ -1,6 +1,7 @@
 import {createGlobalStyle} from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+
   :root{
     --dark-gradient: linear-gradient(90deg, #091124 46.35%, #202D3A 100%);
     --orange-gradient: linear-gradient(180deg, #FFB802 0%, #FA741B 100%);
@@ -48,7 +49,6 @@ export const GlobalStyle = createGlobalStyle`
 
   body{
     font-family: 'Inter', sans-serif;
-    background: var(--dark-gradient);
 
     -webkit-font-smoothing: antialiased;
 

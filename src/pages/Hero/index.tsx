@@ -10,18 +10,21 @@ import {
   Content
 } from './styles';
 import LinkButton from '../../components/LinkButton';
+import { useTheme } from '../../hooks/useTheme';
 
 interface HeroProps extends HTMLAttributes<HTMLDivElement>{
 }
 
 export const Hero: React.FC<HeroProps> = ({...props}) => {
-  
+  const {theme} = useTheme();
+
   return (
     <Container 
       id="home"
+      theme={theme}
       {...props}
     >
-      <Content>
+      <Content theme={theme}>
         <section className='presentation'>
           <Typography 
             className='paragraph' 

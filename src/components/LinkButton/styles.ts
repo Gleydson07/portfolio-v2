@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
 
 interface StyleButtonProps {
-  hasIconAndText: boolean
+  hasIconAndText: boolean,
+  theme: string
 }
 
 export const Container = styled.a<StyleButtonProps>`
@@ -19,7 +20,11 @@ export const Container = styled.a<StyleButtonProps>`
 
   background-image: var(--orange-gradient);
   background-origin: border-box;
-  box-shadow: 2px 1000px 1px var(--dark-900) inset;
+  box-shadow: 2px 1000px 1px ${({theme}) => 
+    theme === "light" 
+    ? css`var(--white-400)` 
+    : css`var(--dark-900)`
+  } inset;
 
   color: var(--yellow-500);
 
@@ -28,6 +33,7 @@ export const Container = styled.a<StyleButtonProps>`
   span{
     display: block;
     font-size: 12px;
+    font-weight: 700;
 
     white-space: nowrap;
 
@@ -37,7 +43,7 @@ export const Container = styled.a<StyleButtonProps>`
   }
 
   &:hover{
-    filter: brightness(0.8);
+    filter: brightness(0.95);
   }
   
   svg{

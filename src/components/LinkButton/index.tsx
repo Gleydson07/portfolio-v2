@@ -1,4 +1,5 @@
 import React, { AnchorHTMLAttributes } from 'react';
+import { useTheme } from '../../hooks/useTheme';
 import loadLangText from '../../utils/TextConvert';
 import Loading from '../Loading';
 
@@ -24,11 +25,14 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   target = "_blank",
   ...props
 }) => {
+  const {theme} = useTheme();
+
   return (
     <Container
       hasIconAndText={(!!icon && !!text) || (!!icon && !!translateId)}
       href={link}
       target={target}
+      theme={theme}
       {...props}
     >
       {loading ?
