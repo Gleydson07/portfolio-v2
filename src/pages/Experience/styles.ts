@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
@@ -7,6 +7,12 @@ export const Container = styled.div`
   width: 100%;
   min-height: 85vh;
   overflow: hidden;
+  
+  background: ${({theme}) => 
+    theme === "light" 
+    ? css`var(--white-400)` 
+    : css`var(--dark-gradient)`
+  };
 
   .circle-orange{
     position: absolute;
@@ -17,7 +23,6 @@ export const Container = styled.div`
     height: 300px;
 
     background: var(--orange-700);
-    z-index: -1;
   }
 
   @media(max-width: 1100px){
@@ -49,6 +54,14 @@ export const Content = styled.div`
 
   margin: auto;
   padding: 0 var(--fontSize32);
+
+  h2{
+    color: ${({theme}) => 
+      theme === "light" 
+      ? css`var(--dark-900)` 
+      : css`var(--white-400)`
+    };
+  }
 
   .content{
     display: flex;

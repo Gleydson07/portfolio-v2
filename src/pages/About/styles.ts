@@ -1,12 +1,23 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface AboutProps {
+  theme: string;
+}
+
+
+export const Container = styled.div<AboutProps>`
   position: relative;
   padding-top: 70px;
 
   width: 100%;
   min-height: 85vh;
   overflow: hidden;
+
+  background: ${({theme}) => 
+    theme === "light" 
+    ? css`var(--white-400)` 
+    : css`var(--dark-gradient)`
+  };
 
   .circle-yellow{
     position: absolute;
@@ -15,8 +26,6 @@ export const Container = styled.div`
     border-radius: 200px;
     width: 400px;
     height: 400px;
-
-    z-index: -1;
 
     background: var(--yellow-500);
   }
@@ -56,7 +65,7 @@ export const Container = styled.div`
 
 `;
 
-export const Content = styled.div`  
+export const Content = styled.div<AboutProps>`  
   width: 100%;
   height: 100%;
   max-width: 1440px;
@@ -67,6 +76,14 @@ export const Content = styled.div`
 
   margin: auto;
   padding: 0 var(--fontSize32);
+
+  h2{
+    color: ${({theme}) => 
+      theme === "light" 
+      ? css`var(--dark-900)` 
+      : css`var(--white-400)`
+    };
+  }
   
   .content{
     margin: 0 auto;
@@ -77,6 +94,14 @@ export const Content = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    p{
+      color: ${({theme}) => 
+        theme === "light" 
+        ? css`var(--dark-900)` 
+        : css`var(--white-400)`
+      };
+    }
 
     figure{
       width: 225px;
@@ -111,7 +136,11 @@ export const Content = styled.div`
 
     a{        
       svg{
-        color: var(--white);
+        color: ${({theme}) => 
+          theme === "light" 
+          ? css`var(--dark-800)` 
+          : css`var(--white-400)`
+        };
 
         transition: all 0.2s;
 

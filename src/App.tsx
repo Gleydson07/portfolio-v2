@@ -40,10 +40,10 @@ function App() {
         <GlobalStyle/>
         <Header/>
         <Hero/>
-        {/* <About/> */}
-        {/* <Experience/> */}
-        {/* <Skills/> */}
-        {/* <Projects/> */}
+        <About/>
+        <Experience/>
+        <Skills/>
+        <Projects/>
       </ThemeProvider>
     </IntlProvider>
   );

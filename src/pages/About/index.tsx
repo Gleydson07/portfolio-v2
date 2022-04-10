@@ -17,17 +17,21 @@ import {
   Container,
   Content
 } from './styles';
+import { useTheme } from '../../hooks/useTheme';
 
 interface AboutProps extends HTMLAttributes<HTMLDivElement>{
 }
 
 export const About: React.FC<AboutProps> = ({...props}) => {
+  const {theme} = useTheme();
+
   return (
     <Container 
       id="about"
+      theme={theme}
       {...props}
     >
-      <Content>
+      <Content theme={theme}>
         <Typography
           className='subtitle-medium'
           htmlElement='h2'

@@ -17,12 +17,13 @@ import {
   Container,
   Content
 } from './styles';
+import { useTheme } from '../../hooks/useTheme';
 
 interface SkillsProps extends HTMLAttributes<HTMLDivElement>{
 }
 
-
 export const Skills: React.FC<SkillsProps> = ({...props}) => {
+  const {theme} = useTheme();
   const [skillActive, setSkillActive] = useState('');
   
   const skillsDescription = [
@@ -73,9 +74,13 @@ export const Skills: React.FC<SkillsProps> = ({...props}) => {
   return (
     <Container 
       id="skills"
+      theme={theme}
       {...props}
     >
-      <Content skillDescriptionVisibility={!!skillActive}>
+      <Content 
+        skillDescriptionVisibility={!!skillActive} 
+        theme={theme}
+      >
         <Typography
           className='subtitle-medium'
           htmlElement='h2'

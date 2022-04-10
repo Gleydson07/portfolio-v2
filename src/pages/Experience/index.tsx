@@ -1,6 +1,7 @@
 import React, { HTMLAttributes } from 'react';
 import Tab from '../../components/Tab';
 import Typography from '../../components/Typography';
+import { useTheme } from '../../hooks/useTheme';
 
 import { 
   Container,
@@ -40,12 +41,15 @@ const tabContent = [
 ]
 
 export const Experience: React.FC<ExperienceProps> = ({...props}) => {
+  const {theme} = useTheme();
+
   return (
     <Container  
-      id="experience"
+      id="experience" 
+      theme={theme}
       {...props}
     >
-      <Content>
+      <Content theme={theme}>
         <Typography
           className='subtitle-medium'
           htmlElement='h2'

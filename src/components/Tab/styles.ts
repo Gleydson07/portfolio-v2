@@ -103,6 +103,5 @@ export const Content = styled.div`
 
       margin-bottom: 1.5rem;
     }
-
   }
 `

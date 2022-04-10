@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface StyleSkillsProps {
-  skillDescriptionVisibility: boolean
+  skillDescriptionVisibility: boolean,
+  theme: string
 }
 
 export const Container = styled.div`
@@ -11,6 +12,12 @@ export const Container = styled.div`
   width: 100%;
   min-height: 85vh;
   overflow: hidden;
+  
+  background: ${({theme}) => 
+    theme === "light" 
+    ? css`var(--white-400)` 
+    : css`var(--dark-gradient)`
+  };
   
   @media(max-width: 900px){
     margin-top: 2rem;
@@ -24,6 +31,14 @@ export const Content = styled.div<StyleSkillsProps>`
 
   margin: 0 auto;
   padding: 0 var(--fontSize32);
+  
+  h2{
+    color: ${({theme}) => 
+      theme === "light" 
+      ? css`var(--dark-900)` 
+      : css`var(--white-400)`
+    };
+  }
   
   .content{
     display: flex;
@@ -51,11 +66,17 @@ export const Content = styled.div<StyleSkillsProps>`
       text-align: center;
       margin-bottom: 2rem;
 
+      svg, strong{
+        color: ${({theme}) => 
+          theme === "light" 
+          ? css`var(--dark-800)` 
+          : css`var(--dark-200)`
+        };
+      }
+
       strong{
         display: block;
-
         text-align: center;
-        color: var(--dark-200);
       }
 
       &:hover{
