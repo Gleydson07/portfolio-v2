@@ -1,13 +1,30 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const Container = styled.div`
+interface CardProjectTheme {
+  theme: string;
+}
+
+export const Container = styled.div<CardProjectTheme>`
   display: flex;
   flex-direction: column;
 
   max-width: 450px;
   height: auto;
 
-  margin: 2rem 0;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  border-radius: 0 0.5rem 0 0;
+
+  background: ${({theme}) => 
+    theme === "light" 
+    ? css`var(--white)` 
+    : css`var(--dark-800)`
+  };
+  
+  ${({theme}) => theme === "light" 
+    ? css`box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;` 
+    : css`box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;`
+  }
 
   figure{
     width: 100%;
@@ -29,7 +46,11 @@ export const Container = styled.div`
     display: block;
     padding: 0.5rem 1rem;
 
-    color: var(--white);
+    color: ${({theme}) => 
+      theme === "light" 
+      ? css`var(--dark-800)` 
+      : css`var(--yellow-500)`
+    };
   }
 
   .wrapper{
@@ -44,7 +65,11 @@ export const Container = styled.div`
       margin-top: 1rem;
       margin-bottom: 0.5rem;
 
-      color: var(--dark-300);
+      color: ${({theme}) => 
+        theme === "light" 
+        ? css`var(--dark-300)` 
+        : css`var(--white-400)`
+      };
     }
 
     .tools-list{

@@ -1,4 +1,5 @@
 import React, { MouseEvent, useState } from 'react';
+import { useTheme } from '../../hooks/useTheme';
 import loadLangText from '../../utils/TextConvert';
 import Typography from '../Typography';
 
@@ -6,6 +7,7 @@ import { Container, Content } from './styles';
 
 interface TabProps {
   data: {
+    id: number,
     company: {
       id: string,
       messageDefault: string
@@ -30,7 +32,8 @@ interface TabProps {
 const Tab: React.FC<TabProps> = ({
   data
 }) => {
-  const [currentTab, setCurrentTab] = useState(data[0].company.messageDefault.toLowerCase())
+  const {theme} = useTheme();
+  const [currentTab, setCurrentTab] = useState(String(data[0].id))
   
   const handleClickTab = (event: MouseEvent<HTMLButtonElement>) => {
     const target:any = event.target;
@@ -38,13 +41,13 @@ const Tab: React.FC<TabProps> = ({
   }
 
   return (
-    <Container>
+    <Container theme={theme}>
       <aside>
         {data.map((item) => (
           <button
-            id={item.company.messageDefault.toLowerCase()}
-            key={item.company.messageDefault.toLowerCase()}
-            className={`${currentTab === item.company.messageDefault.toLowerCase() ? "active" : ""}`}
+            id={String(item.id)}
+            key={String(item.id)}
+            className={`${currentTab === String(item.id) ? "active" : ""}`}
             onClick={handleClickTab}
           >
             {loadLangText(item.company.id, item.company.messageDefault)}
@@ -52,9 +55,9 @@ const Tab: React.FC<TabProps> = ({
         ))}
       </aside>
 
-      <Content>
+      <Content theme={theme}>
         {data.map(item => 
-          currentTab === item.company.messageDefault.toLowerCase() &&
+          currentTab === String(item.id) &&
             <section key={item.company.id}>
               <Typography
                 className='subtitle-small'

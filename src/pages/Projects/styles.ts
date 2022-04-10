@@ -1,25 +1,43 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface ProjectsProps {
+  theme: string;
+}
+
+export const Container = styled.div<ProjectsProps>`
   position: relative;
   padding-top: 70px;
 
   width: 100%;
   min-height: 85vh;
   overflow-x: hidden;
+
+  background: ${({theme}) => 
+    theme === "light" 
+    ? css`var(--white-400)` 
+    : css`var(--dark-gradient)`
+  };
   
   @media(max-width: 900px){
     margin-top: 2rem;
   }
 `;
 
-export const Content = styled.div`  
+export const Content = styled.div<ProjectsProps>`  
   width: 100%;
   max-width: 1440px;
   height: 100%;
 
   margin: auto;
   padding: 0 var(--fontSize32);
+
+  h2{
+    color: ${({theme}) => 
+      theme === "light" 
+      ? css`var(--dark-900)` 
+      : css`var(--white-400)`
+    };
+  }
 
   .content{
     display: flex;

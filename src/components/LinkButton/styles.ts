@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
 
-interface StyleButtonProps {
+interface ButtonProps {
   hasIconAndText: boolean,
   theme: string
 }
 
-export const Container = styled.a<StyleButtonProps>`
+export const Container = styled.a<ButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;

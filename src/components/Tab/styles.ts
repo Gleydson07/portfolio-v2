@@ -1,6 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface TabProps {
+  theme: string;
+}
+
+export const Container = styled.div<TabProps>`
   display: flex;
   justify-content: space-between;
   min-height: 400px;
@@ -19,20 +23,42 @@ export const Container = styled.div`
       border-left: 4px solid var(--dark-800);
       border-radius: 0.25rem 0 0 0.25rem;
 
-      background: transparent;
+      ${({theme}) => theme === "light" 
+        ? css`
+          opacity: 0.4;
+          background: var(--white);
+          box-shadow: 2px 1000px 1px var(--white-400) inset, rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        `
+        : css`
+          background: var(--dark-900);
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        `
+      };
+
       color: var(--dark-800);
       font-weight: 700;
 
       text-align: start;
 
-      &.active{
-        background: var(--dark-800);
-        color: var(--white);
+      & + button{
+        margin-top: 0.25rem;
+      }
 
+      &.active{        
+        opacity: 1;
         border-left: 4px solid transparent;
-
         background-image: var(--orange-gradient);
-        box-shadow: 2px 1000px 1px var(--dark-800) inset;
+
+        ${({theme}) => theme === "light" 
+          ? css`
+            color: var(--dark-800);
+            box-shadow: 2px 1000px 1px var(--white) inset, rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+          `
+          : css`
+            color: var(--white);
+            box-shadow: 2px 1000px 1px var(--dark-800) inset, rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          `
+        }; 
       }
     }
   }
@@ -59,7 +85,7 @@ export const Container = styled.div`
   }
 `
 
-export const Content = styled.div`
+export const Content = styled.div<TabProps>`
   background: var(--dark-800);
   width: 100%;
   max-width: 800px;
@@ -70,11 +96,29 @@ export const Content = styled.div`
   border-right: 4px solid transparent;
 
   background-image: var(--orange-gradient);
-  box-shadow: 2px 1000px 1px var(--dark-800) inset;
+
+  ${({theme}) => theme === "light" 
+    ? css`
+      color: var(--dark-800);
+      box-shadow: 2px 1000px 1px var(--white) inset, rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    `
+    : css`
+      color: var(--white);
+      box-shadow: 2px 1000px 1px var(--dark-800) inset, rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    `
+  }; 
 
   section{
     height: 100%;
     padding: 2rem;
+
+    h4, p{
+      color: ${({theme}) => 
+        theme === "light" 
+        ? css`var(--dark-900)` 
+        : css`var(--white-400)`
+      };
+    }
 
     h4{
       margin-bottom: 1rem;
@@ -83,6 +127,7 @@ export const Content = styled.div`
     .description-container{
       width: 100%;
       text-indent: 1.5rem;
+
 
       span{
         display: block;

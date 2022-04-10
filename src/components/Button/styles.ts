@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
 
-interface StyleButtonProps {
+interface ButtonProps {
   hasIconAndText: boolean
 }
 
-export const Container = styled.button<StyleButtonProps>`
+export const Container = styled.button<ButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface ExperienceProps {
+  theme: string;
+}
+
+export const Container = styled.div<ExperienceProps>`
   position: relative;
   padding-top: 70px;
 
@@ -48,7 +52,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Content = styled.div`  
+export const Content = styled.div<ExperienceProps>`  
   width: 100%;
   max-width: 1440px;
 

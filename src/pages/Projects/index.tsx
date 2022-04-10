@@ -18,6 +18,7 @@ import {
   Content
 } from './styles';
 import CardProject from '../../components/CardProject';
+import { useTheme } from '../../hooks/useTheme';
 
 const projectsList = [
   {
@@ -83,17 +84,19 @@ const projectsList = [
     githubLink: "https://github.com/Gleydson07/pokemon-edu",
   },
 ]
-
 interface ProjectsProps extends HTMLAttributes<HTMLDivElement>{
 }
 
 export const Projects: React.FC<ProjectsProps> = ({...props}) => {
+  const {theme} = useTheme();
+
   return (
     <Container 
       id="projects"
+      theme={theme}
       {...props}
     >
-      <Content>
+      <Content theme={theme}>
         <Typography
           className='subtitle-medium'
           htmlElement='h2'

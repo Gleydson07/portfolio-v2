@@ -1,11 +1,15 @@
 import styled, { css } from 'styled-components';
 
-interface StyleSkillsProps {
+interface SkillsProps {
   skillDescriptionVisibility: boolean,
   theme: string
 }
 
-export const Container = styled.div`
+interface SkillsThemeProps {
+  theme: string
+}
+
+export const Container = styled.div<SkillsThemeProps>`
   position: relative;
   padding-top: 70px;
 
@@ -24,7 +28,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Content = styled.div<StyleSkillsProps>`  
+export const Content = styled.div<SkillsProps>`  
   width: 100%;
   max-width: 1440px;
   height: 100%;
@@ -114,7 +118,18 @@ export const Content = styled.div<StyleSkillsProps>`
       border-right: 4px solid transparent;
 
       background-image: var(--orange-gradient);
-      box-shadow: 2px 1000px 1px var(--dark-800) inset;
+      box-shadow: 2px 1000px 1px ${({theme}) => theme === "light" 
+        ? css`var(--white)`
+        : css`var(--dark-800)`
+      } inset;
+
+      h6{
+        color: ${({theme}) => 
+          theme === "light" 
+          ? css`var(--dark-800)` 
+          : css`var(--white)`
+        };
+      }
 
       span{
         display: block;

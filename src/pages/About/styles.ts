@@ -4,7 +4,6 @@ interface AboutProps {
   theme: string;
 }
 
-
 export const Container = styled.div<AboutProps>`
   position: relative;
   padding-top: 70px;
@@ -62,7 +61,6 @@ export const Container = styled.div<AboutProps>`
       height: 200px;
     }
   }
-
 `;
 
 export const Content = styled.div<AboutProps>`  

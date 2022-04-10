@@ -12,6 +12,7 @@ import {
 } from 'react-icons/hi'
 
 import { Container } from './styles';
+import { useTheme } from '../../hooks/useTheme';
 
 interface CardProjectProps {
   image: string,
@@ -38,9 +39,10 @@ const CardProject: React.FC<CardProjectProps> = ({
   pageLink,
   githubLink
 }) => {
+  const {theme} = useTheme();
 
   return (
-    <Container>
+    <Container theme={theme}>
       <figure>
         <img src={image} alt={title} loading='lazy'/>
       </figure>

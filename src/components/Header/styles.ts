@@ -1,6 +1,6 @@
 import styled, {css, keyframes} from 'styled-components';
 
-interface StyleHeaderProps {
+interface HeaderProps {
   openMenuBurger: boolean
 }
 
@@ -14,7 +14,7 @@ const fillWidth = keyframes`
 	}
 `
 
-export const Container = styled.header<StyleHeaderProps>`
+export const Container = styled.header<HeaderProps>`
   position: fixed;
   top: 0;
 
