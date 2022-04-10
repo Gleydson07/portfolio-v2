@@ -20,6 +20,11 @@ const Header: React.FC = () => {
   const [selected, setSelected] = useState("nav-home");  
   const [langSelected, setLangSelected] = useState(localStorage.getItem(storageLangName) || "pt-BR");
 
+  const handleToggleTheme = () => {
+    toggleTheme();
+    setOpenMenuBurger(false);
+  }
+
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     const idSelected = event.currentTarget.id;
 
@@ -145,10 +150,10 @@ const Header: React.FC = () => {
                   {loadLangText("app.header.projects", "Projetos")}
                 </a>
               </li>
-              <li>
+              <li className='toggle-item'>
                 <Toggle 
                   currentToggle={theme === "light" ? true : false}
-                  onClick={toggleTheme}
+                  onClick={handleToggleTheme}
                   size="medium"
                 />
               </li>

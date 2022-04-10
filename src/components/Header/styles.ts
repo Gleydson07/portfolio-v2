@@ -1,7 +1,8 @@
 import styled, {css, keyframes} from 'styled-components';
 
 interface HeaderProps {
-  openMenuBurger: boolean
+  openMenuBurger: boolean,
+  theme: string
 }
 
 const fillWidth = keyframes`
@@ -122,6 +123,11 @@ export const Container = styled.header<HeaderProps>`
                 }
               }
             }
+
+            &.toggle-item{
+              display: flex;
+              justify-content: center;
+            }
           }
         }
       }
@@ -143,7 +149,6 @@ export const Container = styled.header<HeaderProps>`
         max-height: 18px;
         margin-left: 2rem;
       }
-
     }
   }
 
@@ -155,14 +160,17 @@ export const Container = styled.header<HeaderProps>`
       align-items: center;
       nav{
         position: fixed;
-        top: 5rem;
+        top: 4.6rem;
         left: 0;      
         
         width: 100%;
-        height: calc(100vh - 4.95rem);
+        height: calc(100vh - 4.6rem);
         padding: 0;
         
-        background: var(--dark-900);
+        background: ${({theme}) => theme === "light" 
+          ? css`var(--white-400)`
+          : css`var(--dark-900)`
+        };
 
         ${({ openMenuBurger }) => openMenuBurger 
         ? css`
@@ -226,6 +234,10 @@ export const Container = styled.header<HeaderProps>`
                 height: 2.25rem;
 
                 margin: 0 auto;
+              }
+
+              &.toggle-item{
+                margin-top: 4rem;
               }
             }
           }  
