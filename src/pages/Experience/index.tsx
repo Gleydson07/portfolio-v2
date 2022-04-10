@@ -38,33 +38,6 @@ const tabContent = [
         messageDefault: "09/08/2021 - Atual"
       },
     },
-  },
-  {
-    id: 2,
-    company: {
-      id: "app.experience.one.company",
-      messageDefault: "E-Confi"
-    },
-    work: {
-      position: {
-        id: "app.experience.one.position",
-        messageDefault: "Desenvolvedor web front-end",
-      },
-      descriptions: [
-        {
-          id: "app.experience.one.description-one",
-          messageDefault: "Criar aplicações com interfaces responsivas, criar códigos bem estruturados, eficientes e testáveis, fazendo uso das melhores práticas de desenvolvimento de software. Integrar dados através do consumo de serviços back-end, criar e manter documentação dos softwares desenvolvidos, entre outros."
-        },
-        {
-          id: "app.experience.one.description-two",
-          messageDefault: "Ferramentas mais usadas: ReactJS, NextJs, Typescript."
-        }        
-      ],
-      date: {
-        id: "app.experience.one.date",
-        messageDefault: "09/08/2021 - Atual"
-      },
-    },
   }
 ]
 

@@ -17,10 +17,6 @@ export const Container = styled.div<ProjectsProps>`
     ? css`var(--white-400)` 
     : css`var(--dark-gradient)`
   };
-  
-  @media(max-width: 900px){
-    margin-top: 2rem;
-  }
 `;
 
 export const Content = styled.div<ProjectsProps>`  
