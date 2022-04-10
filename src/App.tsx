@@ -15,17 +15,17 @@ import langSpanish from "./lang/es.json";
 
 
 function App() {
-  const [currentLanguageFile, setCurrentLanguageFile] = useState(langEnglish);
+  const [currentLanguageFile, setCurrentLanguageFile] = useState(langPortugueseBrazil);
 
   const loadLocale = () => {
     const localeSelected = localStorage.getItem("gsantos@lang") || navigator.language;
   
-    if(localeSelected === "pt-BR"){
-      setCurrentLanguageFile(langPortugueseBrazil);
+    if(localeSelected === "en"){
+      setCurrentLanguageFile(langEnglish);
     }else if(localeSelected === "es"){
       setCurrentLanguageFile(langSpanish);
     }else{
-      setCurrentLanguageFile(langEnglish);
+      setCurrentLanguageFile(langPortugueseBrazil);
     }    
   }  
   

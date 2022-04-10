@@ -9,13 +9,16 @@ import imgSpanish from '../../assets/imgs/header/spain.png'
 
 import { Container } from './styles';
 import loadLangText from '../../utils/TextConvert';
+import Toggle from '../Toggle';
 
 const storageLangName = "gsantos@lang";
+const storageTheme = "gsantos@theme";
 
 const Header: React.FC = () => {
+  const [isThemeLight, setIsThemeLight] = useState(localStorage.getItem(storageTheme) === "light" ? true : false);
   const [isOpenMenuBurger, setOpenMenuBurger] = useState(false);
   const [selected, setSelected] = useState("nav-home");  
-  const [langSelected, setLangSelected] = useState(localStorage.getItem(storageLangName) || "en");
+  const [langSelected, setLangSelected] = useState(localStorage.getItem(storageLangName) || "pt-BR");
 
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     const idSelected = event.currentTarget.id;
@@ -49,8 +52,13 @@ const Header: React.FC = () => {
     }
   }
 
+  const getTheme = () => {
+    localStorage.getItem(storageTheme || "light")
+  }
+
   useEffect(() => {
-    checkHashRouter()
+    getTheme();
+    checkHashRouter();
   }, [])
 
   return (
@@ -138,6 +146,13 @@ const Header: React.FC = () => {
                 >
                   {loadLangText("app.header.projects", "Projetos")}
                 </a>
+              </li>
+              <li>
+                <Toggle 
+                  currentToggle={isThemeLight}
+                  onClick={() => setIsThemeLight(!isThemeLight)}
+                  size="medium"
+                />
               </li>
             </ul>          
           </div>
