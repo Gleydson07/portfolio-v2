@@ -1,4 +1,5 @@
 import React, { ButtonHTMLAttributes } from 'react';
+import { useTheme } from '../../hooks/useTheme';
 import Loading from '../Loading';
 
 import { Container } from './styles';
@@ -17,9 +18,12 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   ...props
 }) => {
+  const {theme} = useTheme();
+
   return (
     <Container
       hasIconAndText={!!icon && !!text}
+      theme={theme}
       onClick={onClick}
       {...props}
     >

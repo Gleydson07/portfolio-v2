@@ -18,12 +18,17 @@ export const Container = styled.button<StyleButtonProps>`
 
   background-image: var(--orange-gradient);
   background-origin: border-box;
-  box-shadow: 2px 1000px 1px var(--dark-900) inset;
+  box-shadow: 2px 1000px 1px ${({theme}) => 
+    theme === "light" 
+    ? css`var(--white-400)` 
+    : css`var(--dark-900)`
+  } inset;
 
   color: var(--yellow-500);
 
   span{
     font-size: 12px;
+    font-weight: 700;
   }
 
   &:hover{
