@@ -23,7 +23,7 @@ export const Container = styled.header<HeaderProps>`
   align-items: center;
   
   width: 100%;
-  min-height: 70px;
+  height: 70px;
   z-index: 1;
   
   backdrop-filter: blur(5px);
@@ -152,19 +152,19 @@ export const Container = styled.header<HeaderProps>`
     }
   }
 
-  @media(max-width: 900px){    
-    top: 0;
+  @media(max-width: 900px){
     > div{
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       nav{
         position: fixed;
-        top: 4.6rem;
+        top: 4.65rem;
         left: 0;      
         
         width: 100%;
-        height: calc(100vh - 4.6rem);
+        height: calc(100vh - 4.65rem);
         padding: 0;
         
         background: ${({theme}) => theme === "light" 
@@ -248,6 +248,24 @@ export const Container = styled.header<HeaderProps>`
         display: block;
       }
        
+    }
+  }
+
+  @media(max-width: 720px){
+    > div{
+      nav{
+        top: 5rem;
+        height: calc(100vh - 5rem);
+      }
+    }
+  }
+
+  @media(max-width: 600px){
+    > div{
+      nav{
+        top: 5.4rem;
+        height: calc(100vh - 5.4rem);
+      }
     }
   }
 `;
