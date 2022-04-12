@@ -9,7 +9,7 @@ export const Container = styled.div<ExperienceProps>`
   padding-top: 70px;
 
   width: 100%;
-  min-height: 85vh;
+  min-height: auto;
   overflow: hidden;
   
   background: ${({theme}) => 

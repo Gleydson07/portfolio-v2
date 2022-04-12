@@ -14,8 +14,8 @@ export const Container = styled.div<SkillsThemeProps>`
   padding-top: 70px;
 
   width: 100%;
-  min-height: 85vh;
   overflow: hidden;
+  min-height: auto;
   
   background: ${({theme}) => 
     theme === "light" 
@@ -89,7 +89,7 @@ export const Content = styled.div<SkillsProps>`
 
   .skill-description-wrapper{
     max-width: 600px;
-    min-height: 10rem;
+    height: 12rem;
     
     margin: 0 auto;
     margin-top: 4rem;
@@ -157,6 +157,12 @@ export const Content = styled.div<SkillsProps>`
 
     .skill-description-wrapper{
       margin-top: 1rem;
+    }
+  }
+
+  @media(max-width: 475px){
+    .skill-description-wrapper{
+      height: fit-content;
     }
   }
 `;
