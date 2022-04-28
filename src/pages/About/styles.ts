@@ -165,8 +165,8 @@ export const Content = styled.div<AboutProps>`
 
     .content{
       figure{
-        min-width: 180px;
-        min-height: 180px;
+        width: 180px;
+        height: 180px;
 
         img{
           width: 100%;
@@ -198,9 +198,7 @@ export const Content = styled.div<AboutProps>`
       margin: 2rem auto;
 
       figure{
-        min-width: 120px;
         width: 120px;
-        min-height: 120px;
         height: 120px;
 
         margin: 0;
