@@ -170,7 +170,7 @@ export const Content = styled.div<AboutProps>`
 
         img{
           width: 100%;
-          height: auto;
+          height: 100%;
         }
       }
 
@@ -208,7 +208,7 @@ export const Content = styled.div<AboutProps>`
 
         img{
           width: 100%;
-          height: auto;
+          height: 100%;
         }
         margin-bottom: 2rem;
       }
