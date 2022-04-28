@@ -103,9 +103,14 @@ export const Content = styled.div<AboutProps>`
 
     figure{
       width: 225px;
-      height: auto;
+      height: 225px;
 
       margin-right: 2rem;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .description-container{

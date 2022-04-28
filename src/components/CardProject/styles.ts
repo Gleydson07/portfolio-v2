@@ -32,7 +32,7 @@ export const Container = styled.div<CardProjectTheme>`
     
     img{
       width: 100%;
-      height: auto;
+      height: 100%;
 
       border-right: 4px solid transparent;
       border-radius: 0 0.25rem 0.25rem 0;
