@@ -9,7 +9,7 @@ export const Container = styled.button`
 
   img{
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
 
