@@ -77,6 +77,7 @@ const Header: React.FC = () => {
             <div className="flag-container">
               <FlagButton
                 id="pt-BR"
+                name="brasil"
                 image={imgBrazil}
                 tooltip="Brasil"
                 onClick={handleChangeLang}
@@ -84,6 +85,7 @@ const Header: React.FC = () => {
               />
               <FlagButton
                 id="en"
+                name="usa"
                 image={imgEUA}
                 tooltip="USA"
                 onClick={handleChangeLang}
@@ -91,6 +93,7 @@ const Header: React.FC = () => {
               />
               <FlagButton
                 id="es"
+                name="espana"
                 image={imgSpanish}
                 tooltip="Espanã"
                 onClick={handleChangeLang}

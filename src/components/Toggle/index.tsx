@@ -41,6 +41,7 @@ const Toggle: React.FC<ToggleProps> = ({
         <div>
           {iconLeft}
           <ButtonToggle
+            name="toggle-btn"
             currentStaste={currentToggle}
             size={size}
             colorButton={colorButton}

@@ -49,6 +49,7 @@ export const Hero: React.FC<HeroProps> = ({...props}) => {
 
           <div className='cta-container'>
             {/* <LinkButton 
+              name="cv"
               loading={false}
               icon={<FiDownload size="1rem"/>}
               translateId="app.hero.downloadCV"
@@ -58,6 +59,7 @@ export const Hero: React.FC<HeroProps> = ({...props}) => {
             /> */}
 
             <LinkButton 
+              name="contact"
               translateId="app.hero.contact"
               messageDefault="Entre em contato"
               link={"https://api.whatsapp.com/send?phone=558281114246&text=Ol%C3%A1!!"}

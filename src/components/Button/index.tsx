@@ -7,6 +7,7 @@ import { Container } from './styles';
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   icon?: JSX.Element,
   text?: string,
+  name: string,
   loading?: boolean,
   onClick: () => void
 }
@@ -14,6 +15,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
 const Button: React.FC<ButtonProps> = ({
   icon,
   text,
+  name,
   loading,
   onClick,
   ...props
@@ -22,6 +24,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <Container
+      name={name}
       hasIconAndText={!!icon && !!text}
       theme={theme}
       onClick={onClick}

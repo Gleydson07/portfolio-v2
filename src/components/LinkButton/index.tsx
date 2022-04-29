@@ -6,6 +6,7 @@ import Loading from '../Loading';
 import { Container } from './styles';
 
 interface LinkButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement>{
+  name: string,
   icon?: JSX.Element,
   text?: string,
   translateId?: string,
@@ -16,6 +17,7 @@ interface LinkButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement>{
 }
 
 const LinkButton: React.FC<LinkButtonProps> = ({
+  name,
   icon,
   text,
   loading,
