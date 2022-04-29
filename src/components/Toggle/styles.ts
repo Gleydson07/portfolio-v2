@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
-type toggleSize = "small" | "medium" | "large";
+type toggleSizeType = "small" | "medium" | "large";
 
 interface ToggleSizeProps {
-  size: toggleSize;
+  size: toggleSizeType;
   colorButton:string,
   colorBoard:string,
 };
 
 interface ToggleProps {
   currentStaste: boolean;
-  size: toggleSize;
+  size: toggleSizeType;
   colorButton:string,
   colorBoard:string,
 }

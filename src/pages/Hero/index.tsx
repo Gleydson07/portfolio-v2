@@ -4,7 +4,7 @@ import Typography from '../../components/Typography';
 
 import { svgDevCommiting } from '../../assets/svgs/hero';
 
-import {FiDownload} from 'react-icons/fi';
+// import {FiDownload} from 'react-icons/fi';
 import { 
   Container,
   Content
