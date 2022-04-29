@@ -78,6 +78,7 @@ const CardProject: React.FC<CardProjectProps> = ({
         <div className='call-to-actions'>
           {pageLink ? <LinkButton
             name="visit"
+            aria-label="visit webpage"
             icon={linkIcon}
             translateId='app.projects.visit-button'
             messageDefault="Visitar"
@@ -87,6 +88,7 @@ const CardProject: React.FC<CardProjectProps> = ({
 
           {githubLink ? <LinkButton
             name="github"
+            aria-label="visit-github-page"
             icon={githubIcon}
             text="Github"
             link={githubLink}

@@ -78,6 +78,7 @@ const Header: React.FC = () => {
               <FlagButton
                 id="pt-BR"
                 name="brasil"
+                aria-label="change language to Brasil"
                 image={imgBrazil}
                 tooltip="Brasil"
                 onClick={handleChangeLang}
@@ -88,6 +89,7 @@ const Header: React.FC = () => {
                 name="usa"
                 image={imgEUA}
                 tooltip="USA"
+                aria-label="change language to USA"
                 onClick={handleChangeLang}
                 disabled={langSelected === "en"}
               />
@@ -96,6 +98,7 @@ const Header: React.FC = () => {
                 name="espana"
                 image={imgSpanish}
                 tooltip="Espanã"
+                aria-label="change language to Espanã"
                 onClick={handleChangeLang}
                 disabled={langSelected === "es"}
               />
