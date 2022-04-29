@@ -104,11 +104,12 @@ export const Content = styled.div<AboutProps>`
     figure{
       width: 225px;
       height: 225px;
-
+      
       margin-right: 2rem;
-
+      
       img{
         width: 100%;
+        min-width: 225px;
         height: 100%;
       }
     }
@@ -167,9 +168,10 @@ export const Content = styled.div<AboutProps>`
       figure{
         width: 180px;
         height: 180px;
-
+        
         img{
           width: 100%;
+          min-width: 180px;
           height: 100%;
         }
       }
@@ -200,12 +202,13 @@ export const Content = styled.div<AboutProps>`
       figure{
         width: 120px;
         height: 120px;
-
+        
         margin: 0;
         padding: 0;
-
+        
         img{
           width: 100%;
+          min-width: 120px;
           height: 100%;
         }
         margin-bottom: 2rem;
