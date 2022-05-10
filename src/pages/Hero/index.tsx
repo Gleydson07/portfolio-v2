@@ -4,7 +4,7 @@ import Typography from '../../components/Typography';
 
 import { svgDevCommiting } from '../../assets/svgs/hero';
 
-// import {FiDownload} from 'react-icons/fi';
+import {FiDownload} from 'react-icons/fi';
 import { 
   Container,
   Content
@@ -48,7 +48,7 @@ export const Hero: React.FC<HeroProps> = ({...props}) => {
           />  
 
           <div className='cta-container'>
-            {/* <LinkButton 
+            <LinkButton 
               name="cv"
               aria-label="download cv"
               loading={false}
@@ -57,7 +57,7 @@ export const Hero: React.FC<HeroProps> = ({...props}) => {
               messageDefault="Baixar CV"
               link={"pdf/gleydson-cv.pdf"}
               download
-            /> */}
+            />
 
             <LinkButton 
               name="contact"

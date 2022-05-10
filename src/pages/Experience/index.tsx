@@ -26,7 +26,7 @@ const tabContent = [
       descriptions: [
         {
           id: "app.experience.one.description-one",
-          messageDefault: "Criar aplicações com interfaces responsivas, criar códigos bem estruturados, eficientes e testáveis, fazendo uso das melhores práticas de desenvolvimento de software. Integrar dados através do consumo de serviços back-end, criar e manter documentação dos softwares desenvolvidos, entre outros."
+          messageDefault: "Criar aplicações com interfaces responsivas, códigos bem estruturados, eficientes e testáveis, fazendo uso das melhores práticas de desenvolvimento de software. Integrar dados através do consumo de serviços back-end, ferramentas de monitoramento de erros, Headless CMS, criar e manter documentação das funcionalidades desenvolvidas, entre outros."
         },
         {
           id: "app.experience.one.description-two",
@@ -35,7 +35,7 @@ const tabContent = [
       ],
       date: {
         id: "app.experience.one.date",
-        messageDefault: "09/08/2021 - Atual"
+        messageDefault: "09/08/2021 - 09/05/2022"
       },
     },
   }
