@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from 'react';
 import Typography from '../../components/Typography';
 
-import me2Img from '../../assets/imgs/about/me2.png'
+import meImg from '../../assets/imgs/about/me5.png'
 
 import {
   FaGithub,
@@ -31,7 +31,7 @@ export const About: React.FC<AboutProps> = ({...props}) => {
       theme={theme}
       {...props}
     >
-      <Content theme={theme}>
+      <Content theme={theme} >
         <Typography
           className='subtitle-medium'
           htmlElement='h2'
@@ -41,7 +41,7 @@ export const About: React.FC<AboutProps> = ({...props}) => {
 
         <div className='content'>
           <figure>
-            <img src={me2Img} alt="me" />
+            <img src={meImg} alt="me" />
           </figure>
           <div className='description-container'>
             <Typography

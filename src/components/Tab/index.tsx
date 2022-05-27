@@ -33,7 +33,7 @@ const Tab: React.FC<TabProps> = ({
   data
 }) => {
   const {theme} = useTheme();
-  const [currentTab, setCurrentTab] = useState(String(data[0].id))
+  const [currentTab, setCurrentTab] = useState(String(data[data.length-1].id))
   
   const handleClickTab = (event: MouseEvent<HTMLButtonElement>) => {
     const target:any = event.target;
@@ -43,7 +43,7 @@ const Tab: React.FC<TabProps> = ({
   return (
     <Container theme={theme}>
       <aside>
-        {data.map((item) => (
+        {data.reverse().map((item) => (
           <button
             id={String(item.id)}
             key={String(item.id)}
@@ -56,7 +56,7 @@ const Tab: React.FC<TabProps> = ({
       </aside>
 
       <Content theme={theme}>
-        {data.map(item => 
+        {data.reverse().map(item => 
           currentTab === String(item.id) &&
             <section key={item.company.id}>
               <Typography

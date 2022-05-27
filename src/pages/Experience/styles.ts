@@ -87,10 +87,5 @@ export const Content = styled.div<ExperienceProps>`
     h2{
       text-align: center;
     }
-
-    .content{
-      /* margin: 0; */
-      /* margin-top: 1rem; */
-    }
   }
 `;

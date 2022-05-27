@@ -21,6 +21,12 @@
   "app.experience.one.description-two": "Most used tools: ReactJS, NextJs, Typescript.",
   "app.experience.one.date": "09/08/2021 - 09/05/2022",
 
+  "app.experience.two.company": "Trinus Co",
+  "app.experience.two.position": "Full-stack developer",
+  "app.experience.two.description-one": "Development of front-end and back-end interfaces based on the Javascript stack, applying SOLID development principles, unit and integration tests, in addition to clean code best practices.",
+  "app.experience.two.description-two": "Most used tools: ReactJS, NextJs, Typescript, Prismic, NodeJS, Prisma, NestJS, Express.",
+  "app.experience.two.date": "06/06/2022 - Current",
+
   "app.skills.title": "SKILLS",
   "app.skills.react": "Library created by Facebook focused on creating interfaces in a declarative, efficient and flexible way.",
   "app.skills.next": "Next.js is an open source React front-end development web framework created by Vercel that enables functionality such as server-side rendering and static website generation for React-based web applications.",

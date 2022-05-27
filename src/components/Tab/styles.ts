@@ -13,6 +13,7 @@ export const Container = styled.div<TabProps>`
   aside{
     min-width: 200px;
     margin-right: 2rem;
+    z-index: 0;
     
     button{      
       width: 100%;

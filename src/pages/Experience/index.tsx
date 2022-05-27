@@ -38,7 +38,34 @@ const tabContent = [
         messageDefault: "09/08/2021 - 09/05/2022"
       },
     },
-  }
+  },
+  // {
+  //   id: 2,
+  //   company: {
+  //     id: "app.experience.two.company",
+  //     messageDefault: "Trinus Co"
+  //   },
+  //   work: {
+  //     position: {
+  //       id: "app.experience.two.position",
+  //       messageDefault: "Desenvolvedor full-stack",
+  //     },
+  //     descriptions: [
+  //       {
+  //         id: "app.experience.two.description-one",
+  //         messageDefault: "Desenvolvimento de interfaces front-end e back-end baseados na stack Javascript, aplicando princípios de desenvolvimento SOLID, testes unitário e de integração, além das melhores práticas de clean code."
+  //       },
+  //       {
+  //         id: "app.experience.two.description-two",
+  //         messageDefault: "Ferramentas mais usadas: ReactJS, NextJs, Typescript, Prismic, NodeJS, Prisma, NestJS, Express."
+  //       }        
+  //     ],
+  //     date: {
+  //       id: "app.experience.two.date",
+  //       messageDefault: "06/06/2022 - Atualmente"
+  //     },
+  //   },
+  // },
 ]
 
 export const Experience: React.FC<ExperienceProps> = ({...props}) => {
@@ -50,6 +77,7 @@ export const Experience: React.FC<ExperienceProps> = ({...props}) => {
       theme={theme}
       {...props}
     >
+      <span className='circle-orange'></span>
       <Content theme={theme}>
         <Typography
           className='subtitle-medium'
@@ -65,7 +93,6 @@ export const Experience: React.FC<ExperienceProps> = ({...props}) => {
         </div>
       </Content>
 
-      <span className='circle-orange'></span>
     </Container>
   );
 }

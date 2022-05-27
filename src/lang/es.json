@@ -20,6 +20,12 @@
   "app.experience.one.description-one": "Cree aplicaciones con interfaces receptivas, cree códigos bien estructurados, eficientes y comprobables, haciendo uso de las mejores prácticas de desarrollo de software. Integrar datos a través del consumo de servicios back-end, crear y mantener documentación del software desarrollado, entre otros.",
   "app.experience.one.description-two": "Herramientas más utilizadas: ReactJS, NextJs, Typescript.",
   "app.experience.one.date": "09/08/2021 - 09/05/2022",
+
+  "app.experience.two.company": "Trinus Co",
+  "app.experience.two.position": "Full-stack Desarrollador",
+  "app.experience.two.description-one": "Desarrollo de interfaces front-end y back-end basados en la pila de Javascript, aplicando principios de desarrollo SOLID, pruebas unitarias y de integración, además de las mejores prácticas de código limpio.",
+  "app.experience.two.description-two": "Herramientas más utilizadas: ReactJS, NextJs, Typescript, Prismic, NodeJS, Prisma, NestJS, Express.",
+  "app.experience.two.date": "06/06/2022 - Actualmente",
   
   "app.skills.title": "HABILIDADES",
   "app.skills.react": "Biblioteca creada por Facebook enfocada a crear interfaces de forma declarativa, eficiente y flexible.",
