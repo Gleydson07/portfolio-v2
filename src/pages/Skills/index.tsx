@@ -6,14 +6,11 @@ import {
   SiNextdotjs,
   SiFirebase,
   SiFigma,
-  SiGit,
   SiPostgresql,
   SiMicrosoftsqlserver,
+  SiNestjs,
+  SiNodedotjs,
 } from 'react-icons/si';
-
-import {
-  RiReactjsLine,
-} from 'react-icons/ri'
 
 import { 
   Container,
@@ -24,68 +21,70 @@ import { useTheme } from '../../hooks/useTheme';
 interface SkillsProps extends HTMLAttributes<HTMLDivElement>{
 }
 
+const ICON_SIZE = "4rem";
+
+const skillsDescription = [
+  {
+    id: "react",
+    translateId: "app.skills.react",
+    tool: "ReactJS",
+    icon: <SiReact size={ICON_SIZE}/>,
+    messageDefault: "Biblioteca criada pelo Facebook com foco na criação de interfaces de forma declarativa, eficiente e flexível.",
+  },
+  {
+    id: "next",
+    translateId: "app.skills.next",
+    tool: "NextJS",
+    icon: <SiNextdotjs size={ICON_SIZE}/>,
+    messageDefault: "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada pela Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+  },
+  {
+    id: "firebase",
+    translateId: "app.skills.firebase",
+    tool: "Firebase",
+    icon: <SiFirebase size={ICON_SIZE}/>,
+    messageDefault: "Firebase é uma plataforma desenvolvida pelo Google para a criação de aplicativos móveis e da web.",
+  },
+  {
+    id: "figma",
+    translateId: "app.skills.figma",
+    tool: "Figma",
+    icon: <SiFigma size={ICON_SIZE}/>,
+    messageDefault: "O Figma é uma ferramenta de UI online e gratuita, feita para criar, colaborar, prototipar e inspecionar.",
+  },
+  {
+    id: "nodejs",
+    translateId: "app.skills.nodejs",
+    tool: "NodeJS",
+    icon: <SiNodedotjs size={ICON_SIZE}/>,
+    messageDefault: "Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web.",
+  },
+  {
+    id: "nestjs",
+    translateId: "app.skills.nestjs",
+    tool: "NestJS",
+    icon: <SiNestjs size={ICON_SIZE}/>,
+    messageDefault: "NestJS é um framework Node.js de código aberto destinado ao desenvolvimento de aplicativos do lado do servidor.",
+  },
+  {
+    id: "postgres",
+    translateId: "app.skills.postgres",
+    tool: "Postgres",
+    icon: <SiPostgresql size={ICON_SIZE}/>,
+    messageDefault: "PostgreSQL é um sistema gerenciador de banco de dados objeto relacional, desenvolvido como projeto de código aberto",
+  },
+  {
+    id: "sqlserver",
+    translateId: "app.skills.sqlserver",
+    tool: "SQL Server",
+    icon: <SiMicrosoftsqlserver size={ICON_SIZE}/>,
+    messageDefault: "O Microsoft SQL Server é um sistema gerenciador de Banco de dados relacional mantido pela Microsoft",
+  },
+]
+
 export const Skills: React.FC<SkillsProps> = ({...props}) => {
   const {theme} = useTheme();
   const [skillActive, setSkillActive] = useState('');
-  
-  const skillsDescription = [
-    {
-      id: "react",
-      translateId: "app.skills.react",
-      tool: "ReactJS",
-      icon: <SiReact size="4rem"/>,
-      messageDefault: "Biblioteca criada pelo Facebook com foco na criação de interfaces de forma declarativa, eficiente e flexível.",
-    },
-    {
-      id: "next",
-      translateId: "app.skills.next",
-      tool: "NextJS",
-      icon: <SiNextdotjs size="4rem"/>,
-      messageDefault: "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada pela Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
-    },
-    {
-      id: "reactnative",
-      translateId: "app.skills.reactnative",
-      tool: "React Native",
-      icon: <RiReactjsLine size="4rem"/>,
-      messageDefault: "React Native é uma biblioteca Javascript criada pelo Facebook. É usada para desenvolver aplicativos para os sistemas Android e iOS de forma nativa.",
-    },
-    {
-      id: "firebase",
-      translateId: "app.skills.firebase",
-      tool: "Firebase",
-      icon: <SiFirebase size="4rem"/>,
-      messageDefault: "Firebase é uma plataforma desenvolvida pelo Google para a criação de aplicativos móveis e da web.",
-    },
-    {
-      id: "figma",
-      translateId: "app.skills.figma",
-      tool: "Figma",
-      icon: <SiFigma size="4rem"/>,
-      messageDefault: "O Figma é uma ferramenta de UI online e gratuita, feita para criar, colaborar, prototipar e inspecionar.",
-    },
-    {
-      id: "git",
-      translateId: "app.skills.git",
-      tool: "Git",
-      icon: <SiGit size="4rem"/>,
-      messageDefault: "É um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo.",
-    },
-    {
-      id: "postgres",
-      translateId: "app.skills.postgres",
-      tool: "Postgres",
-      icon: <SiPostgresql size="4rem"/>,
-      messageDefault: "PostgreSQL é um sistema gerenciador de banco de dados objeto relacional, desenvolvido como projeto de código aberto",
-    },
-    {
-      id: "sqlserver",
-      translateId: "app.skills.sqlserver",
-      tool: "SQL Server",
-      icon: <SiMicrosoftsqlserver size="4rem"/>,
-      messageDefault: "O Microsoft SQL Server é um sistema gerenciador de Banco de dados relacional mantido pela Microsoft",
-    },
-  ]
 
   return (
     <Container 

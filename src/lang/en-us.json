@@ -36,6 +36,8 @@
   "app.skills.git": "It is a distributed version control system, mainly used in software development, but it can be used to record edit history of any type of file.",
   "app.skills.postgres": "PostgreSQL is an object-relational database management system, developed as an open source project.",
   "app.skills.sqlserver": "Microsoft SQL Server is a relational database management system maintained by Microsoft.",
+  "app.skills.nodejs": "Node.js is open-source, cross-platform software based on Google's V8 interpreter that allows you to run JavaScript code outside of a web browser.",
+   "app.skills.nestjs":"NestJS is an open source Node.js framework intended for server-side application development.",
 
   "app.projects.title": "PROJECTS",
   "app.projects.title-used-technology" : "Technologies used",

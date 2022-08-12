@@ -36,6 +36,8 @@
   "app.skills.git": "É um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo.",
   "app.skills.postgres": "PostgreSQL é um sistema gerenciador de banco de dados objeto relacional, desenvolvido como projeto de código aberto.",
   "app.skills.sqlserver": "O Microsoft SQL Server é um sistema gerenciador de Banco de dados relacional mantido pela Microsoft.",
+  "app.skills.nodejs": "Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web.",
+  "app.skills.nestjs":"NestJS é um framework Node.js de código aberto destinado ao desenvolvimento de aplicativos do lado do servidor.",
 
   "app.projects.title": "PROJETOS",
   "app.projects.title-used-technology" : "Tecnologias usadas",
