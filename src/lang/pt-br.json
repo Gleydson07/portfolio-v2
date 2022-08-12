@@ -6,7 +6,7 @@
   "app.header.projects" : "Projetos",
 
   "app.hero.hello": "Olá, meu nome é",
-  "app.hero.work": "Desenvolvedor Front-end.",
+  "app.hero.work": "Desenvolvedor Full-stack.",
   "app.hero.downloadCV": "Baixar CV",
   "app.hero.contact": "Entre em contato",
 
@@ -24,7 +24,7 @@
   "app.experience.two.company": "Trinus Co",
   "app.experience.two.position": "Desenvolvedor Full-stack",
   "app.experience.two.description-one": "Desenvolvimento de interfaces front-end e back-end baseados na stack Javascript, aplicando princípios de desenvolvimento SOLID, testes unitário e de integração, além das melhores práticas de clean code.",
-  "app.experience.two.description-two": "Ferramentas mais usadas: ReactJS, NextJs, Typescript, Prismic, NodeJS, Prisma, NestJS, Express.",
+  "app.experience.two.description-two": "Ferramentas mais usadas: ReactJS, Typescript, NodeJS, Express, Postgres e SQL Server",
   "app.experience.two.date": "06/06/2022 - Atualmente",
 
   "app.skills.title": "HABILIDADES",
@@ -34,6 +34,8 @@
   "app.skills.firebase": "Firebase é uma plataforma desenvolvida pelo Google para a criação de aplicativos móveis e da web.",
   "app.skills.figma": "O Figma é uma ferramenta de UI online e gratuita, feita para criar, colaborar, prototipar e inspecionar.",
   "app.skills.git": "É um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo.",
+  "app.skills.postgres": "PostgreSQL é um sistema gerenciador de banco de dados objeto relacional, desenvolvido como projeto de código aberto.",
+  "app.skills.sqlserver": "O Microsoft SQL Server é um sistema gerenciador de Banco de dados relacional mantido pela Microsoft.",
 
   "app.projects.title": "PROJETOS",
   "app.projects.title-used-technology" : "Tecnologias usadas",

@@ -39,33 +39,33 @@ const tabContent = [
       },
     },
   },
-  // {
-  //   id: 2,
-  //   company: {
-  //     id: "app.experience.two.company",
-  //     messageDefault: "Trinus Co"
-  //   },
-  //   work: {
-  //     position: {
-  //       id: "app.experience.two.position",
-  //       messageDefault: "Desenvolvedor full-stack",
-  //     },
-  //     descriptions: [
-  //       {
-  //         id: "app.experience.two.description-one",
-  //         messageDefault: "Desenvolvimento de interfaces front-end e back-end baseados na stack Javascript, aplicando princípios de desenvolvimento SOLID, testes unitário e de integração, além das melhores práticas de clean code."
-  //       },
-  //       {
-  //         id: "app.experience.two.description-two",
-  //         messageDefault: "Ferramentas mais usadas: ReactJS, NextJs, Typescript, Prismic, NodeJS, Prisma, NestJS, Express."
-  //       }        
-  //     ],
-  //     date: {
-  //       id: "app.experience.two.date",
-  //       messageDefault: "06/06/2022 - Atualmente"
-  //     },
-  //   },
-  // },
+  {
+    id: 2,
+    company: {
+      id: "app.experience.two.company",
+      messageDefault: "Trinus Co"
+    },
+    work: {
+      position: {
+        id: "app.experience.two.position",
+        messageDefault: "Desenvolvedor full-stack",
+      },
+      descriptions: [
+        {
+          id: "app.experience.two.description-one",
+          messageDefault: "Desenvolvimento de interfaces front-end e back-end baseados na stack Javascript, aplicando princípios de desenvolvimento SOLID, testes unitário e de integração, além das melhores práticas de clean code."
+        },
+        {
+          id: "app.experience.two.description-two",
+          messageDefault: "Ferramentas mais usadas: ReactJS, NextJs, Typescript, NodeJS, Express."
+        }        
+      ],
+      date: {
+        id: "app.experience.two.date",
+        messageDefault: "06/06/2022 - Atualmente"
+      },
+    },
+  },
 ]
 
 export const Experience: React.FC<ExperienceProps> = ({...props}) => {

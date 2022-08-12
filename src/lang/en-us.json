@@ -6,7 +6,7 @@
   "app.header.projects" : "Projects",
 
   "app.hero.hello": "Hello, my name is",
-  "app.hero.work": "Front-end developer.",
+  "app.hero.work": "Full-stack developer.",
   "app.hero.downloadCV": "Download CV",
   "app.hero.contact": "Contact",
 
@@ -24,7 +24,7 @@
   "app.experience.two.company": "Trinus Co",
   "app.experience.two.position": "Full-stack developer",
   "app.experience.two.description-one": "Development of front-end and back-end interfaces based on the Javascript stack, applying SOLID development principles, unit and integration tests, in addition to clean code best practices.",
-  "app.experience.two.description-two": "Most used tools: ReactJS, NextJs, Typescript, Prismic, NodeJS, Prisma, NestJS, Express.",
+  "app.experience.two.description-two": "Most used tools: ReactJS, Typescript, NodeJS, Express, Postgres and SQL Server",
   "app.experience.two.date": "06/06/2022 - Current",
 
   "app.skills.title": "SKILLS",
@@ -34,6 +34,8 @@
   "app.skills.firebase": "Firebase is a platform developed by Google for building mobile and web applications.",
   "app.skills.figma": "Figma is a free, online UI tool made for creating, collaborating, prototyping and inspecting.",
   "app.skills.git": "It is a distributed version control system, mainly used in software development, but it can be used to record edit history of any type of file.",
+  "app.skills.postgres": "PostgreSQL is an object-relational database management system, developed as an open source project.",
+  "app.skills.sqlserver": "Microsoft SQL Server is a relational database management system maintained by Microsoft.",
 
   "app.projects.title": "PROJECTS",
   "app.projects.title-used-technology" : "Technologies used",

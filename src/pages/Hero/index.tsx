@@ -44,7 +44,7 @@ export const Hero: React.FC<HeroProps> = ({...props}) => {
             className='subtitle-small' 
             htmlElement='span'
             translateId='app.hero.work'
-            messageDefault='Desenvolvedor front-end.'
+            messageDefault='Desenvolvedor Full-stack.'
           />  
 
           <div className='cta-container'>

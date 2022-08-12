@@ -7,6 +7,8 @@ import {
   SiFirebase,
   SiFigma,
   SiGit,
+  SiPostgresql,
+  SiMicrosoftsqlserver,
 } from 'react-icons/si';
 
 import {
@@ -68,7 +70,21 @@ export const Skills: React.FC<SkillsProps> = ({...props}) => {
       tool: "Git",
       icon: <SiGit size="4rem"/>,
       messageDefault: "É um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo.",
-    }
+    },
+    {
+      id: "postgres",
+      translateId: "app.skills.postgres",
+      tool: "Postgres",
+      icon: <SiPostgresql size="4rem"/>,
+      messageDefault: "PostgreSQL é um sistema gerenciador de banco de dados objeto relacional, desenvolvido como projeto de código aberto",
+    },
+    {
+      id: "sqlserver",
+      translateId: "app.skills.sqlserver",
+      tool: "SQL Server",
+      icon: <SiMicrosoftsqlserver size="4rem"/>,
+      messageDefault: "O Microsoft SQL Server é um sistema gerenciador de Banco de dados relacional mantido pela Microsoft",
+    },
   ]
 
   return (
