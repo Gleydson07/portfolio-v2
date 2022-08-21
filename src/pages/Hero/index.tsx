@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({...props}) => {
             className='title' 
             htmlElement='h4'
           >
-            Gleydson A. da Silva Santos
+            Gleydson Albuquerque
           </Typography>
 
           <Typography 
