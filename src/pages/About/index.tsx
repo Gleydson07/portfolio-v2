@@ -48,7 +48,7 @@ export const About: React.FC<AboutProps> = ({...props}) => {
               className='phrase'
               htmlElement='p'
               translateId='app.about.paragraph-one'
-              messageDefault='Formado em Sistemas de informação em 2018 e atualmente pós-graduando em Engenharia de Software, sempre me considerei um entusiasta de tecnologia e seus impactos na sociedade. Gosto de desafios e busco frequentemente me colocar fora da zona de conforto.'
+              messageDefault='Me considero um entusiasta de tecnologia e seus impactos em nosso cotidiano, gosto de buscar desafios e me colocar fora da zona de conforto. Tenho formação em Sistemas de Informação e sou pós-graduado em Engenharia de Software, estou sempre em busca de novos aprendizados nas mais diversas áreas de conhecimento, pois acredito que o conhecimento é fundamental para o sucesso.'
             />
             
             <Typography
