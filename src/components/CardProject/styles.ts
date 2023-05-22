@@ -9,7 +9,7 @@ export const Container = styled.div<CardProjectTheme>`
   flex-direction: column;
 
   max-width: 450px;
-  height: auto;
+  min-height: 450px;
 
   margin: 1rem 0;
   padding-bottom: 1rem;

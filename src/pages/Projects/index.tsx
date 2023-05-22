@@ -51,6 +51,8 @@ const projectsList = [
         tooltip: "Axios"
       }
     ],
+    pageLink: "https://anime-views.vercel.app/",
+    githubLink: "https://github.com/Gleydson07/anime_views",
   },
   {
     image: beepImg,
