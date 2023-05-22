@@ -44,5 +44,6 @@
   "app.projects.visit-button": "Visita",
   "app.projects.one.description": "Trabajo freelance desarrollando la interfaz de una plataforma de seguimiento y gestión financiera.",
   "app.projects.two.description": "Reto propuesto durante un proceso de selección de desarrollador front-end. Es un formulario de preguntas y respuestas sobre varios temas, al final tenemos un resumen de las respuestas.",
-  "app.projects.three.description": "Es un juego que tiene como objetivo que los niños practiquen las enseñanzas adquiridas en la escuela de forma lúdica utilizando la temática del juego POKEMON."
+  "app.projects.three.description": "Es un juego que tiene como objetivo que los niños practiquen las enseñanzas adquiridas en la escuela de forma lúdica utilizando la temática del juego POKEMON.",
+  "app.projects.four.description": "Proyecto colaborativo con la finalidad de incorporación en la cartera. Es una aplicación web para consultar anime en la api kitsu, con paginación y búsqueda de texto."
 }

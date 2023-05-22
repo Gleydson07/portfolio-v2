@@ -6,21 +6,52 @@ import {
   SiStyledcomponents,
   SiFirebase,
   SiSass,
-  SiMaterialui
+  SiMui,
+  SiNextdotjs,
+  SiAntdesign,
+  SiAxios,
 } from 'react-icons/si'
 
+import animeview from '../../assets/imgs/projects/animeview.png';
 import beepImg from '../../assets/imgs/projects/beep.png';
 import pokemonImg from '../../assets/imgs/projects/pokemon.png';
 import whatstheanswerImg from '../../assets/imgs/projects/whatstheanswer.png';
+
+import CardProject from '../../components/CardProject';
+import { useTheme } from '../../hooks/useTheme';
 
 import { 
   Container,
   Content
 } from './styles';
-import CardProject from '../../components/CardProject';
-import { useTheme } from '../../hooks/useTheme';
 
 const projectsList = [
+  {
+    image: animeview,
+    title: "Anime View",
+    description: {
+      id: "app.projects.four.description",
+      messageDefault: "Projeto colaborativo com finalidade de incorporação no portfólio."
+    },
+    tools: [
+      {
+        icon: <SiNextdotjs/>,
+        tooltip: "NextJS",
+      },
+      {
+        icon: <SiAntdesign/>,
+        tooltip: "Ant Design",
+      },
+      {
+        icon: <SiStyledcomponents/>,
+        tooltip: "Styled-Components"
+      },
+      {
+        icon: <SiAxios/>,
+        tooltip: "Axios"
+      }
+    ],
+  },
   {
     image: beepImg,
     title: "BEEP",
@@ -52,7 +83,7 @@ const projectsList = [
         tooltip: "React",
       },
       {
-        icon: <SiMaterialui/>,
+        icon: <SiMui/>,
         tooltip: "Material UI",
       },      
     ],
